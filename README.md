@@ -1,3 +1,10 @@
 # Nossa UFSJ
 
-**Sendo Construindo**
+Projeto para aula de Banco de Dados ministrada pelo Professor Leonardo Rocha na Faculdade Federal de São João del Rei (UFSJ).
+
+#### Contributors
+
+- Higor Alves
+- Nicolas Assis
+- Rogers
+- Luzia Silva
