@@ -4,7 +4,7 @@ Projeto para aula de Banco de Dados ministrada pelo Professor Leonardo Rocha na 
 
 #### Contributors
 
-- Higor Alves
+- Higor Alves - [Goodyearalves@gmail.com](Goodyearalves@gmail.com)
 - Nicolas Assis
 - Rogers
 - Luzia Silva
