@@ -5,6 +5,4 @@ import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faNewspaper);
 
-export const NEWSPAPER = () => (
-	<FontAwesomeIcon icon="newspaper" size={'3x'} style={'font-color: #757de8'} />
-);
+export const NEWSPAPER = () => <FontAwesomeIcon icon="newspaper" size={'3x'} />;
