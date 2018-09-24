@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../assets/css/navbar.css';
 
 export default class Navbar extends Component {
 	render() {
 		return (
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+			<nav className="navbar navbar-expand-lg navbar-dark navbar-primary">
 				<a className="navbar-brand" href="">
 					Trabalho Pratico
 				</a>
