@@ -14,8 +14,8 @@ export default class Navbar extends Component {
 						className="navbar-toggler"
 						type="button"
 						data-toggle="collapse"
-						data-target="#navbarTogglerDemo01"
-						aria-controls="navbarTogglerDemo01"
+						data-target="#navbarToggler"
+						aria-controls="navbarToggler"
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
@@ -23,17 +23,30 @@ export default class Navbar extends Component {
 					</button>
 				</nav>
 
-				<div className="collapsing navbar-collapse navbar-nav mr-auto mt-2 mt-lg-0" id="navbarTogglerDemo01">
+				<section className="collapsing navbar-collapse navbar-nav mr-auto mt-2 mt-lg-0" id="navbarToggler">
 					<h5>10.658</h5>
 					<span>Recursos disponiveis</span>
-					<br />
 					<div className="input-group p-3">
 						<input type="text" className="form-control" placeholder="Pesquisar artigos disponiveis" aria-label="Recipient's username" aria-describedby="button-addon2" />
 						<div className="input-group-append">
 							<button className="btn btn-outline-secondary" type="button" id="button-addon2"><SEARCH /> Pesquisar</button>
 						</div>
 					</div>
-				</div>
+
+					<section>
+						<div className="container-fluid">
+							<div className="row">
+								<div className="mx-auto p-3">
+									<div className="tableHeader">
+										<p>Visualizar por categoria</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				</section>
 			</div>
 		);
 	}
