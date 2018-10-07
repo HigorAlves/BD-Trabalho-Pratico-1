@@ -13,13 +13,14 @@ import './index.css';
 import App from './App';
 import Home from './screens/Home';
 import Login from './screens/Login';
+import Cadastro from './screens/Cadastro';
 
 ReactDOM.render(
   <Router>
     <div>
       <Route exact path='/' component={Home} />
       <Route exact path='/login' component={Login} />
-      <Route exact path='/teste' component={App} />
+      <Route exact path='/cadastrar' component={Cadastro} />
     </div>
   </Router>
   , document.getElementById('root'));

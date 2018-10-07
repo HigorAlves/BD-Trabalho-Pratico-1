@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/css/table.css';
 import { SEARCH } from '../lib/fontAwesome';
 
@@ -63,12 +64,12 @@ export default class Sidebar extends Component {
 								<tbody>
 									<tr>
 										<td>
-											<span>Logar</span>
+											<Link to={'/login'}>Logar</Link>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<span>Criar Conta</span>
+											<Link className='text-muted' to={'/cadastrar'}>Cadastrar</Link>
 										</td>
 									</tr>
 								</tbody>
@@ -77,7 +78,7 @@ export default class Sidebar extends Component {
 					</div>
 				</section>
 
-			</div >
+			</div>
 		);
 	}
 }
