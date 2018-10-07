@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Posts from './components/Posts';
-import Jumbotron from './components/Jumbotron';
 
 class App extends Component {
 	render() {

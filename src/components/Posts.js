@@ -9,14 +9,14 @@ export default class Posts extends Component {
 				<h4>Artigos recentes</h4>
 				<hr />
 				<section>
-					<div className='container'>
+					<div className='container-fluid'>
 						<div className='row'>
-							<div className='col-1'>
+							<div className='col-lg-1 col-md-2 col-sm-1'>
 								<NEWSPAPER />
 							</div>
-							<div className='col-10'>
+							<div className='col-lg-11 col-md-10 col-sm-11'>
 								<h5>Titulo do artigo deve aparecer aqui</h5>
-								<h6>pessoas que participaram do artigo aqui</h6>
+								<h6>Nome dos autores</h6>
 							</div>
 						</div>
 
