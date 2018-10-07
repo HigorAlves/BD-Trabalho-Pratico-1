@@ -5,7 +5,6 @@ const mysql = require('mysql');
 const app = express();
 app.use(cors());
 
-const INSERT_USUARIO = 'insert into tipo_Usuario (cpf_usr, nome, senha, logradouro, numero, bairro, cep, datacad) values (`${cpf_usr}`, `${nome}`, ${senha}, `${logradouro}`, `${numero}`, `${bairro}`, `${cep}`, `${datacad}`)';
 
 const SELECT_ALL_USUARIOS = 'SELECT * FROM heroku_7c4a5149dcb9e6c.tipo_usuario'
 
@@ -38,17 +37,20 @@ app.get('/usuarios', (req, res) => {
   })
 });
 
-app.get('/usuarios/cadastrar', (req, res) => {
-  const usuario = { cpf_usr: req.query.cpf_usr, nome: req.query.nome, senha: req.query.senha, logradouro: req.query.logradouro, numero: req.query.numero, bairro: req.query.bairro, cep: req.query.cep, datacad: req.query.datacad }
+///cadastrar?cpf_usr=034285601&nome=Higor&senha=123456&logradouro=rua&numero=12&bairro=centro&cep=35550000&datacad=07-11-2018
+// app.get('/usuarios/cadastrar', (req, res) => {
+//   const { cpf_usr, nome, senha, logradouro, numero, bairro, cep, datacad } = req.query;
 
-  connection.query(INSERT_USUARIO, usuario, (error, results) => {
-    if (error) {
-      return res.send(error);
-    } else {
-      return res.send('Usuario cadastrado com sucesso');
-    }
-  })
-})
+//   const INSERT_USUARIO = 'INSERT INTO tipo_Usuario (cpf_usr, nome, senha, logradouro, numero, bairro, cep, datacad) VALUES (' + cpf_usr + ',' + nome + ',' + senha + ',' + logradouro + ',' + numero + ',' + bairro + ',' + cep + ',' + datacad + ')';
+
+//   connection.query(INSERT_USUARIO, (error, results) => {
+//     if (error) {
+//       return res.send(error);
+//     } else {
+//       return res.send('Usuario cadastrado com sucesso');
+//     }
+//   })
+// })
 
 app.listen(4000, () => {
   console.log('Executando na porta 4000');

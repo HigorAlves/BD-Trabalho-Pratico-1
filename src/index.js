@@ -14,6 +14,7 @@ import App from './App';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
+import TelaADM from './screens/TelaADM';
 
 ReactDOM.render(
   <Router>
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route exact path='/' component={Home} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/cadastrar' component={Cadastro} />
+      <Route exact path='/administrador' component={TelaADM} />
     </div>
   </Router>
   , document.getElementById('root'));
