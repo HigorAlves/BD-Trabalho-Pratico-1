@@ -14,32 +14,15 @@ body {
   background-color: #027ac6;
 }
 
-.table {
-  width: 90vw;
-}
-
-th {
-  background-color: #027ac6;
-  color: white;
-  text-align: center;
-}
-table td {
-  width: 50%;
-}
-
-td span {
-  margin-left: 1em;
-}
-.centerTableHeader {
-  padding-top: 0.5%;
-}
-
-.semMargin{
-  margin-bottom: 0;
-}
-
 .centralizado{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.telaCentralizada{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

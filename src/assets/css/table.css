@@ -1,4 +1,13 @@
-.texto {
+th {
+  background-color: #027ac6;
   color: white;
   text-align: center;
+}
+table td {
+  width: 50%;
+  border: 1px solid #ddd;
+}
+
+td span {
+  margin-left: 1em;
 }

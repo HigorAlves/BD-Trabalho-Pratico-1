@@ -11,11 +11,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './index.css';
 import App from './App';
+import Home from './screens/Home';
+import Login from './screens/Login';
 
 ReactDOM.render(
   <Router>
-    <Route path='/' component={App} />
+    <div>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/teste' component={App} />
+    </div>
   </Router>
-
   , document.getElementById('root'));
 registerServiceWorker();
