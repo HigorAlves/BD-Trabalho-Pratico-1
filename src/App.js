@@ -17,7 +17,6 @@ class App extends Component {
 								A simple primary alert—check it out!
 							</div>
 							<Posts />
-							<p>ola mundo</p>
 						</div>
 
 						{/*Sidebar com as opões escolhidas*/}

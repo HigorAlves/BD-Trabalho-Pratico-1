@@ -65,6 +65,8 @@ export default class Sidebar extends Component {
 										<td>
 											<span>Logar</span>
 										</td>
+									</tr>
+									<tr>
 										<td>
 											<span>Criar Conta</span>
 										</td>
