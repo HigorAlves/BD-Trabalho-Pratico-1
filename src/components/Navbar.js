@@ -8,7 +8,7 @@ export default class Navbar extends Component {
 			<div>
 				<nav className="navbar navbar-expand-lg navbar-dark navbar-primary">
 					<a className="navbar-brand" href="">
-						Trabalho Pratico
+						Acervo de Recursos Educacionais
 					</a>
 					<button
 						className="navbar-toggler"
