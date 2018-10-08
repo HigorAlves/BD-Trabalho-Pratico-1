@@ -24,7 +24,10 @@ import AlterarTipoUsuario from './screens/Administrador/Alteracao/AlterarTipoUsu
 import AlterarAreas from './screens/Administrador/Alteracao/AlterarAreas';
 import AlterarAgenciaFomento from './screens/Administrador/Alteracao/AlterarAgenciaFomento';
 import AlterarDepartamento from './screens/Administrador/Alteracao/AlterarDepartamento';
-// import AlterarRecursoFinanceiro from './screens/Administrador/Alteracao/AlterarRecursoFinanceiro';
+import AlterarRecursoFinanceiro from './screens/Administrador/Alteracao/AlterarRecursoFinanceiro';
+import AlterarDocumento from './screens/Administrador/Alteracao/AlterarDocumento';
+import AlterarPublicacao from './screens/Administrador/Alteracao/AlterarPublicacao';
+import AlterarTipoPublicacao from './screens/Administrador/Alteracao/AlterarTipoPublicacao';
 
 export default class Route extends Component {
   constructor(props) {
@@ -67,6 +70,10 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarareas' component={AlterarAreas} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alteraragenciafomento' component={AlterarAgenciaFomento} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardepartamento' component={AlterarDepartamento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarrecursofinanceiro' component={AlterarRecursoFinanceiro} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardocumento' component={AlterarDocumento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarpublicacao' component={AlterarPublicacao} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterartipopublicacao' component={AlterarTipoPublicacao} />
         </div>
       </Router>
     )
