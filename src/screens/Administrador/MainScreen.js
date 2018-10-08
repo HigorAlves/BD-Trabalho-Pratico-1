@@ -33,7 +33,7 @@ export default class MainScreen extends Component {
                     </div>
                     <div className='col-md-4'>
                       <USERS />
-                      <Link to={'/cadastrarGrandesAreas'}>Cadastrar Grandes Areas</Link>
+                      <Link to={'/cadastrarGrandesAreas'}>Cadastrar Areas</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
@@ -72,8 +72,6 @@ export default class MainScreen extends Component {
 
             {/*Sidebar com as opões escolhidas*/}
             <div className={'col-lg-3 col-md-3 col-sm-3 d-none d-sm-none d-lg-block'}>
-              <h5>Comunicados</h5>
-              <hr />
             </div>
           </div>
         </div>

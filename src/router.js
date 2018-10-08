@@ -43,7 +43,7 @@ export default class Route extends Component {
           {/* //Telas somente do Administrador */}
           <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={AdmScreen} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarUsuarios' component={CadastrarUsuario} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/alterarusuario' component={AlterarTipoUsuario} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
         </div>
       </Router>
