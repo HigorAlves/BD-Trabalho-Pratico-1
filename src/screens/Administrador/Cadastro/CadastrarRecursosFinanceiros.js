@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/NavBarAdm';
+import Navbar from '../../../components/NavBarAdm';
 
 export default class CadastrarRecursosFinanceiros extends Component {
   render() {

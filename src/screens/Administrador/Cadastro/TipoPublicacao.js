@@ -1,6 +1,6 @@
 //Nome //CPF
 import React, { Component } from 'react';
-import Navbar from '../../components/NavBarAdm';
+import Navbar from '../../../components/NavBarAdm';
 
 export default class CadastroTipoPublicacao extends Component {
   render() {

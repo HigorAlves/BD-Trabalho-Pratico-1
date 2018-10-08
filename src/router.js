@@ -11,16 +11,16 @@ import AlterandousuarioDados from './screens/AlterandoUsuarioDados';
 
 //Telas Administrador
 import AdmScreen from './screens/Administrador/MainScreen';
-import CadastrarUsuario from './screens/Administrador/CadastroUsuarios';
+import CadastrarUsuario from './screens/Administrador/Cadastro/CadastroUsuarios';
 import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
 import AlterarTipoUsuario from './screens/Administrador/AlterarTipoUsuario';
-import CadastrarGrandesAreas from './screens/Administrador/GrandesAreas';
-import CadastroAgenciaFomento from './screens/Administrador/AgenciaFomento';
-import CadastroDepartamento from './screens/Administrador/CadastroDepartamento';
-import CadastrarDocumento from './screens/Administrador/CadastrarDocumento';
-import CadastroPublicacoes from './screens/Administrador/CadastroPublicacoes';
-import CadastrarRecursosFinanceiros from './screens/Administrador/CadastrarRecursosFinanceiros';
-import CadastroTIpoPublicacao from './screens/Administrador/TipoPublicacao';
+import CadastrarGrandesAreas from './screens/Administrador/Cadastro/GrandesAreas';
+import CadastroAgenciaFomento from './screens/Administrador/Cadastro/AgenciaFomento';
+import CadastroDepartamento from './screens/Administrador/Cadastro/CadastroDepartamento';
+import CadastrarDocumento from './screens/Administrador/Cadastro/CadastrarDocumento';
+import CadastroPublicacoes from './screens/Administrador/Cadastro/CadastroPublicacoes';
+import CadastrarRecursosFinanceiros from './screens/Administrador/Cadastro/CadastrarRecursosFinanceiros';
+import CadastroTIpoPublicacao from './screens/Administrador/Cadastro/TipoPublicacao';
 
 export default class Route extends Component {
   constructor(props) {
