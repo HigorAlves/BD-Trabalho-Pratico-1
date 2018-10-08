@@ -18,6 +18,7 @@ import CadastroAgenciaFomento from './screens/Administrador/AgenciaFomento';
 import CadastroDepartamento from './screens/Administrador/CadastroDepartamento';
 import CadastrarDocumento from './screens/Administrador/CadastrarDocumento';
 import CadastroPublicacoes from './screens/Administrador/CadastroPublicacoes';
+import CadastrarRecursosFinanceiros from './screens/Administrador/CadastrarRecursosFinanceiros';
 
 export default class Route extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrardepartamento' component={CadastroDepartamento} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarDocumento' component={CadastrarDocumento} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarpublicacao' component={CadastroPublicacoes} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
         </div>
       </Router>
