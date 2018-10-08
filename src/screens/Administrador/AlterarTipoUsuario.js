@@ -156,7 +156,7 @@ export default class AlterarTipousuario extends Component {
                     <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
                   </div>
                   <br />
-                  <button type="submit" class="btn btn-success my-2">Cadastrar</button>
+                  <button type="submit" class="btn btn-success my-2">Alterar Dados</button>
                 </form>
 
               </div>
