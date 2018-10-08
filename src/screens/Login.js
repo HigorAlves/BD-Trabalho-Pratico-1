@@ -5,11 +5,17 @@ import Navbar from '../components/Navbar';
 export default class Login extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      usuario: null
+    }
     this.handleLogin = this.handleLogin.bind(this);
   }
+  handleChangeUsuario = (e) => this.setState({ usuario: e.target.value });
+
   handleLogin() {
     let token = 'estalogado';
     localStorage.setItem('auth-token', token);
+    localStorage.setItem('dados-usuario', this.state.usuario);
   }
 
   render() {
@@ -23,7 +29,7 @@ export default class Login extends Component {
                 <h5 className="mb-7 py-3">Faça login com sua conta</h5>
                 <form onSubmit={this.handleLogin}>
                   <div className="form-group">
-                    <input type="text" className="form-control" name="Usuario" placeholder="Usuario" />
+                    <input type="text" className="form-control" name="Usuario" placeholder="Usuario" value={this.state.usuario} onChange={this.handleChangeUsuario} />
                   </div>
 
                   <div className="form-group">
