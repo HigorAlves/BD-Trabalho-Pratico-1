@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import '../assets/css/navbar.css';
 
-export default class Navbar extends Component {
+class Navbar extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleDeslogar = () => {
+    localStorage.removeItem('auth-token');
+    localStorage.removeItem('nome');
+    this.props.history.push('/');
+  }
+
   render() {
     return (
       <div>
@@ -32,6 +41,7 @@ export default class Navbar extends Component {
                 </div>
               </li>
             </ul>
+            <button className='btn btn-danger' onClick={this.handleDeslogar} >Deslogar do Sistema</button>
           </div>
         </nav>
 
@@ -45,3 +55,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default withRouter(Navbar);

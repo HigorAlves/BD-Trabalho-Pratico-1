@@ -13,7 +13,7 @@ export default class MainScreen extends Component {
   }
 
   componentWillMount() {
-    let usuario = localStorage.getItem('dados-usuario');
+    let usuario = localStorage.getItem('nome');
     this.setState({ usuario });
   }
 

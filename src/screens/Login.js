@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import '../assets/css/loginPage.css';
 import Navbar from '../components/Navbar';
+import { withRouter } from 'react-router-dom';
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +13,12 @@ export default class Login extends Component {
   }
   handleChangeUsuario = (e) => this.setState({ usuario: e.target.value });
 
-  handleLogin() {
+  handleLogin = (e) => {
+    e.preventDefault();
     let token = 'estalogado';
     localStorage.setItem('auth-token', token);
-    localStorage.setItem('dados-usuario', this.state.usuario);
+    localStorage.setItem('nome', this.state.usuario);
+    this.props.history.push("/administrador");
   }
 
   render() {
@@ -53,3 +56,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default withRouter(Login)
