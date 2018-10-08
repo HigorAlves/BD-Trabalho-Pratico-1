@@ -61,7 +61,7 @@ export default class MainScreen extends Component {
                     </div>
                     <div className='col-md-4'>
                       <USERS />
-                      <p>Cadastrar Documento</p>
+                      <Link to={'/cadastrardocumento'}>Cadastrar Documento</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />

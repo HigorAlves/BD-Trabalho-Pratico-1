@@ -16,6 +16,7 @@ import AlterarTipoUsuario from './screens/Administrador/AlterarTipoUsuario';
 import CadastrarGrandesAreas from './screens/Administrador/GrandesAreas';
 import CadastroAgenciaFomento from './screens/Administrador/AgenciaFomento';
 import CadastroDepartamento from './screens/Administrador/CadastroDepartamento';
+import CadastrarDocumento from './screens/Administrador/CadastrarDocumento';
 
 export default class Route extends Component {
   constructor(props) {
@@ -49,6 +50,8 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraragenciafomento' component={CadastroAgenciaFomento} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrardepartamento' component={CadastroDepartamento} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarDocumento' component={CadastrarDocumento} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
         </div>
       </Router>
     )

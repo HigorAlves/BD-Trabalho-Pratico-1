@@ -11,7 +11,8 @@ export default class Cadastro extends Component {
       logradouro: null,
       numero: null,
       bairro: null,
-      cep: null
+      cep: null,
+      cadastradorSucesso: null
     }
 
     this.handleChangeCpf = this.handleChangeCpf.bind(this);
