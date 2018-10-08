@@ -23,6 +23,8 @@ import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
 import AlterarTipoUsuario from './screens/Administrador/Alteracao/AlterarTipoUsuario';
 import AlterarAreas from './screens/Administrador/Alteracao/AlterarAreas';
 import AlterarAgenciaFomento from './screens/Administrador/Alteracao/AlterarAgenciaFomento';
+import AlterarDepartamento from './screens/Administrador/Alteracao/AlterarDepartamento';
+// import AlterarRecursoFinanceiro from './screens/Administrador/Alteracao/AlterarRecursoFinanceiro';
 
 export default class Route extends Component {
   constructor(props) {
@@ -64,6 +66,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarareas' component={AlterarAreas} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alteraragenciafomento' component={AlterarAgenciaFomento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardepartamento' component={AlterarDepartamento} />
         </div>
       </Router>
     )
