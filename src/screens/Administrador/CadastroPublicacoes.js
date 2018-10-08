@@ -9,7 +9,7 @@ export default class CadastroPublicacoes extends Component {
         <div className='container'>
           <div className='row'>
             <div className='col-12'>
-              <h4>Cadastar Agencia de Fomento</h4>
+              <h4 className='my-2'>Cadastar Publicação</h4>
               <hr />
               <form>
                 <div className='form-row'>
@@ -86,23 +86,25 @@ export default class CadastroPublicacoes extends Component {
                 </div>
 
                 <div className='form-row'>
-                <div class="form-group col-md-6">
-                  <label for="inputIdentificadorEsp">CPF Administrador</label>
-                  <select id="inputIdentificadorEsp" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+                  <div class="form-group col-md-6">
+                    <label for="inputIdentificadorEsp">CPF Administrador</label>
+                    <select id="inputIdentificadorEsp" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputIdentificadorEsp">CPF Pesquisador</label>
+                    <select id="inputIdentificadorEsp" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="inputIdentificadorEsp">CPF Pesquisador</label>
-                  <select id="inputIdentificadorEsp" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+                <div className='d-flex flex-row-reverse'>
+                  <button type="submit" class="btn btn-warning m-2">Cancelar</button>
+                  <button type="submit" class="btn btn-success m-2">Salvar</button>
                 </div>
-                </div>
-                
-                <button type="submit" class="btn btn-primary my-2">Salvar</button>
               </form>
             </div>
           </div>
