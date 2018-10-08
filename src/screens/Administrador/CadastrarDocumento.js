@@ -25,7 +25,7 @@ export default class CadastrarDocumento extends Component {
                 </div>
                 <div class="form-group">
                   <label for="inputData">Caminho</label>
-                  <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="DD/MM/YYYY" />
+                  <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="link para o doc" />
                 </div>
                 <button type="submit" class="btn btn-primary my-2">Salvar</button>
               </form>
