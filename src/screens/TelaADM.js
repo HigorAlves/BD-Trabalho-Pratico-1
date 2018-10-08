@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/NavBarAdm';
 import { USERS } from '../lib/fontAwesome';
+import { Link } from 'react-router-dom';
 
 export default class TelaADM extends Component {
   render() {
@@ -56,7 +57,10 @@ export default class TelaADM extends Component {
                 <hr />
                 <div className='container'>
                   <div className='row'>
-
+                    <div className='col-md-4'>
+                      <USERS />
+                      <Link to={'todosusuarios'}>Listar Usuarios</Link>
+                    </div>
                   </div>
                 </div>
               </section>

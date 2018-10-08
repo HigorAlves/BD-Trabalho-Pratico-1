@@ -77,6 +77,6 @@ app.get('/administrador/cadastrar', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log('Executando na porta 4000');
 })
