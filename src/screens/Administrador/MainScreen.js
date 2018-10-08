@@ -36,42 +36,42 @@ export default class MainScreen extends Component {
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
-                      <Link to={'/cadastrarusuarios'}>Cadastrar Usuario</Link>
+                      <Link to={'/cadastrarusuarios'} className='text-dark'>Cadastrar Usuario</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <AREA />
                       <br />
-                      <Link to={'/cadastrarGrandesAreas'}>Cadastrar Areas</Link>
+                      <Link to={'/cadastrarGrandesAreas'} className='text-dark'>Cadastrar Areas</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <AGENCIA />
                       <br />
-                      <Link to={'/cadastraragenciafomento'}>Cadastrar Agencia Fomento</Link>
+                      <Link to={'/cadastraragenciafomento'} className='text-dark'>Cadastrar Agencia Fomento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <DEPARTAMENTO />
                       <br />
-                      <Link to={'/cadastrardepartamento'}>Cadastrar Departamento</Link>
+                      <Link to={'/cadastrardepartamento'} className='text-dark'>Cadastrar Departamento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <RECURSOS />
                       <br />
-                      <Link to={'/cadastrarrecursosfinanceiros'}>Cadastrar Recursos Financeiros</Link>
+                      <Link to={'/cadastrarrecursosfinanceiros'} className='text-dark'>Cadastrar Recursos Financeiros</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <DOCUMENTO />
                       <br />
-                      <Link to={'/cadastrardocumento'}>Cadastrar Documento</Link>
+                      <Link to={'/cadastrardocumento'} className='text-dark'>Cadastrar Documento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <PUBLICACAO />
                       <br />
-                      <Link to={'/cadastrarpublicacao'}>Cadastrar Publicação</Link>
+                      <Link to={'/cadastrarpublicacao'} className='text-dark'>Cadastrar Publicação</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <PUBLICACAO />
                       <br />
-                      <Link to={'/cadastratipopublicacao'}>Cadastrar Tipo Publicação</Link>
+                      <Link to={'/cadastratipopublicacao'} className='text-dark'>Cadastrar Tipo Publicação</Link>
                     </div>
                   </div>
                 </div>
@@ -85,42 +85,42 @@ export default class MainScreen extends Component {
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
-                      <Link to={'/alterarusuario'}>Alterar Usuario</Link>
+                      <Link to={'/alterarusuario'} className='text-dark'>Alterar Usuario</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <AREA />
                       <br />
-                      <Link to={'/alterarareas'}>Alterar Areas</Link>
+                      <Link to={'/alterarareas'} className='text-dark'>Alterar Areas</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <AGENCIA />
                       <br />
-                      <Link to={'/alteraragenciafomento'}>Alterar Agencia Fomento</Link>
+                      <Link to={'/alteraragenciafomento'} className='text-dark'>Alterar Agencia Fomento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <DEPARTAMENTO />
                       <br />
-                      <Link to={'/alterardepartamento'}>Alterar Departamento</Link>
+                      <Link to={'/alterardepartamento'} className='text-dark'>Alterar Departamento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <RECURSOS />
                       <br />
-                      <Link to={'/alterarrecursofinanceiro'}>Alterar Recurso Financeiro</Link>
+                      <Link to={'/alterarrecursofinanceiro'} className='text-dark'>Alterar Recurso Financeiro</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <DOCUMENTO />
                       <br />
-                      <Link to={'/alterardocumento'}>Alterar Documento</Link>
+                      <Link to={'/alterardocumento'} className='text-dark'>Alterar Documento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <PUBLICACAO />
                       <br />
-                      <Link to={'/alterarpublicacao'}>Alterar Alterar Publicação</Link>
+                      <Link to={'/alterarpublicacao'} className='text-dark'>Alterar Alterar Publicação</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <PUBLICACAO />
                       <br />
-                      <Link to={'/alterartipopublicacao'}>Alterar Tipo de Publicação</Link>
+                      <Link to={'/alterartipopublicacao'} className='text-dark'>Alterar Tipo de Publicação</Link>
                     </div>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default class MainScreen extends Component {
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
-                      <Link to={'/listarusuarios'}>Listar Usuarios</Link>
+                      <Link to={'/listarusuarios'} className='text-dark'>Listar Usuarios</Link>
                     </div>
                   </div>
                 </div>

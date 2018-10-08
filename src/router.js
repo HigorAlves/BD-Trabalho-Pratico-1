@@ -19,7 +19,7 @@ import CadastrarDocumento from './screens/Administrador/Cadastro/CadastrarDocume
 import CadastroPublicacoes from './screens/Administrador/Cadastro/CadastroPublicacoes';
 import CadastrarRecursosFinanceiros from './screens/Administrador/Cadastro/CadastrarRecursosFinanceiros';
 import CadastroTIpoPublicacao from './screens/Administrador/Cadastro/TipoPublicacao';
-import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
+import ListaUsuarios from './screens/Administrador/Listagem/ListagemUsuarios';
 import AlterarTipoUsuario from './screens/Administrador/Alteracao/AlterarTipoUsuario';
 import AlterarAreas from './screens/Administrador/Alteracao/AlterarAreas';
 import AlterarAgenciaFomento from './screens/Administrador/Alteracao/AlterarAgenciaFomento';
