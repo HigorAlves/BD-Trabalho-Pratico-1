@@ -24,7 +24,6 @@ export default class ListagemUsuarios extends Component {
           <td>{props.Cep}</td>
           <td>{props.Datacad}</td>
           <td>{props.DataSaida}</td>
-          <td><button className='btn btn-warning' type='button'>Alterar</button></td>
           <td><button className='btn btn-danger' type='button' onClick={() => this.removeUsuario(index)}>Deletar</button></td>
         </tr>
       </tbody>
@@ -76,7 +75,6 @@ export default class ListagemUsuarios extends Component {
                     <th>CEP</th>
                     <th>Data Cadastro</th>
                     <th>Data Saida</th>
-                    <th>Alterar</th>
                     <th>Deletar</th>
                   </tr>
                 </thead>
