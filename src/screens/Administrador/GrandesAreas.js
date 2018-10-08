@@ -47,7 +47,7 @@ export default class GrandesAreas extends Component {
 							</form>
 						</div>
 
-						<div className='col-6'>
+						<div className='col-6 py-4'>
 							<h4>SubArea</h4>
 							<hr />
 							<form>
@@ -66,7 +66,7 @@ export default class GrandesAreas extends Component {
 							</form>
 						</div>
 
-						<div className='col-6'>
+						<div className='col-6 py-4'>
 							<h4>Especialidade</h4>
 							<hr />
 							<form>

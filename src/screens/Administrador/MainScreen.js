@@ -23,7 +23,7 @@ export default class MainScreen extends Component {
         <Navbar />
         <div className={'container header'}>
           <div className={'row centralizado'}>
-            <div className="col-lg-9 col-md-7 col-sm-5">
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <div class="alert alert-primary" role="alert">
                 Bem vindo {this.state.usuario}!
 							</div>
@@ -33,51 +33,58 @@ export default class MainScreen extends Component {
                 <hr />
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
                       <Link to={'/cadastrarusuarios'}>Cadastrar Usuario</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
                       <Link to={'/alterarusuario'}>Alterar Tipo Usuario</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastrarGrandesAreas'}>Cadastrar Areas</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastraragenciafomento'}>Cadastrar Agencia Fomento</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastrardepartamento'}>Cadastrar Departamento</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastrarrecursosfinanceiros'}>Cadastrar Recursos Financeiros</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastrardocumento'}>Cadastrar Documento</Link>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/cadastrarpublicacao'}>Cadastrar Publicação</Link>
                     </div>
                   </div>
                 </div>
               </section>
 
-              <section>
+              <section className='my-4'>
                 <h4>Consultas</h4>
                 <hr />
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-md-4'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
+                      <br />
                       <Link to={'/listarusuarios'}>Listar Usuarios</Link>
                     </div>
                   </div>
