@@ -81,10 +81,17 @@ export default class MainScreen extends Component {
                 <h4>Area Alteração</h4>
                 <hr />
                 <div className='container'>
-                  <div className='col-md-2 col-sm-12 text-center m-2'>
-                    <USERS />
-                    <br />
-                    <Link to={'/alterarusuario'}>Alterar Usuario</Link>
+                  <div className='row'>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/alterarusuario'}>Alterar Usuario</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/alterarareas'}>Alterar Areas</Link>
+                    </div>
                   </div>
                 </div>
               </section>

@@ -1,4 +1,3 @@
-//Nome //CPF
 import React, { Component } from 'react';
 import Navbar from '../../../components/NavBarAdm';
 

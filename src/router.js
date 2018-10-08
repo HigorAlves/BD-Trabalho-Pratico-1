@@ -12,8 +12,6 @@ import AlterandousuarioDados from './screens/AlterandoUsuarioDados';
 //Telas Administrador
 import AdmScreen from './screens/Administrador/MainScreen';
 import CadastrarUsuario from './screens/Administrador/Cadastro/CadastroUsuarios';
-import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
-import AlterarTipoUsuario from './screens/Administrador/AlterarTipoUsuario';
 import CadastrarGrandesAreas from './screens/Administrador/Cadastro/GrandesAreas';
 import CadastroAgenciaFomento from './screens/Administrador/Cadastro/AgenciaFomento';
 import CadastroDepartamento from './screens/Administrador/Cadastro/CadastroDepartamento';
@@ -21,6 +19,9 @@ import CadastrarDocumento from './screens/Administrador/Cadastro/CadastrarDocume
 import CadastroPublicacoes from './screens/Administrador/Cadastro/CadastroPublicacoes';
 import CadastrarRecursosFinanceiros from './screens/Administrador/Cadastro/CadastrarRecursosFinanceiros';
 import CadastroTIpoPublicacao from './screens/Administrador/Cadastro/TipoPublicacao';
+import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
+import AlterarTipoUsuario from './screens/Administrador/Alteracao/AlterarTipoUsuario';
+import AlterarAreas from './screens/Administrador/Alteracao/AlterarAreas';
 
 export default class Route extends Component {
   constructor(props) {
@@ -48,6 +49,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={true} exact path='/cadastrar' component={Cadastro} />
 
           {/* //Telas somente do Administrador */}
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/listarusuarios' component={ListaUsuarios} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/administrador' component={AdmScreen} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarusuarios' component={CadastrarUsuario} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarusuario' component={AlterarTipoUsuario} />
@@ -57,9 +59,9 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarDocumento' component={CadastrarDocumento} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarpublicacao' component={CadastroPublicacoes} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
-          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/listarusuarios' component={ListaUsuarios} />
-          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastratipopublicacao' component={CadastroTIpoPublicacao} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarareas' component={AlterarAreas} />
         </div>
       </Router>
     )

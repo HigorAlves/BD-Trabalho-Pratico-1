@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/NavBarAdm';
+import Navbar from '../../../components/NavBarAdm';
 
 export default class AlterarTipousuario extends Component {
   constructor(props) {
@@ -163,6 +163,7 @@ export default class AlterarTipousuario extends Component {
 
                   <br />
                   <button type="submit" class="btn btn-success my-2">Alterar Dados</button>
+                  <button type="submit" class="btn btn-danger my-2 mx-4">Deletar</button>
                 </form>
 
               </div>
