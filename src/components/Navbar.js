@@ -8,7 +8,7 @@ export default class Navbar extends Component {
 	render() {
 		return (
 			<div>
-				<nav className="navbar navbar-expand-lg navbar-dark navbar-primary">
+				<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 					<Link className="navbar-brand" to="/">
 						Acervo de Recursos Educacionais
 					</Link>
@@ -35,8 +35,6 @@ export default class Navbar extends Component {
 								<Link class="nav-link" to={'/administrador'}>Administração</Link>
 							</li>
 						</ul>
-						<button className='btn btn-light mx-2' >Login</button>
-						<button className='btn btn-secondary' >Cadastrar</button>
 					</div>
 				</nav>
 

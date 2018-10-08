@@ -12,6 +12,7 @@ export default class Cadastro extends Component {
       numero: null,
       bairro: null,
       cep: null,
+      tipo: null,
       cadastrou: null
     }
 
@@ -58,7 +59,10 @@ export default class Cadastro extends Component {
         this.setState({ cadastrou: true })
         console.log(this.state.cadastrou);
       })
-      .catch(error => console.error(error));
+      .catch(error => {
+        console.log(error, ' Não foi possivel cadastrar');
+        this.setState({ cadastrou: false });
+      });
   }
 
   render() {
@@ -67,6 +71,13 @@ export default class Cadastro extends Component {
       mensagem = (
         <div class="alert alert-success" role="alert">
           Usuario {this.state.nome} cadastrado com sucesso!
+        </div>
+      )
+    }
+    if (this.state.cadastrou === false) {
+      mensagem = (
+        <div class="alert alert-danger" role="alert">
+          Usuario {this.state.nome} não foi cadastrado!
         </div>
       )
     }
@@ -84,7 +95,7 @@ export default class Cadastro extends Component {
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputCpf">CPF</label>
-                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
+                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" mask={'00/00/00'} value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputNome">Nome Completo</label>

@@ -51,34 +51,25 @@ export default class Sidebar extends Component {
 				</section>
 
 				<section>
-					<div className="container-fluid">
+
+					<div className="container">
 						<div className="row">
-							<table className="table table-bordered table-hover table-sm">
-								<thead>
-									<tr>
-										<th colSpan="2" align="justify">
-											Minha Conta
-											</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<Link to={'/login'}>Logar</Link>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<Link className='text-muted' to={'/cadastrar'}>Cadastrar</Link>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<div className='col-sm-2 my-2'>
+								<Link to={'/login'}>
+									<button className='btn btn-light'>Login</button>
+								</Link>
+							</div>
+							<div className='col-sm-4'></div>
+							<div className='col-sm-2 my-2'>
+								<Link to={'/cadastrar'}>
+									<button className='btn btn-secondary'>Cadastrar</button>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</section>
 
-			</div>
+			</div >
 		);
 	}
 }
