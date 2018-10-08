@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import '../assets/css/loginPage.css';
 
+
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLogin = this.handleLogin.bind(this);
+  }
+  handleLogin() {
+    let token = 'estalogado';
+    localStorage.setItem('auth-token', token);
+  }
+
   render() {
     return (
       <section>
@@ -10,7 +20,7 @@ export default class Login extends Component {
             <div className='col-4'>
               <div className="w-400 mw-100 p-6 telaCentralizada backgroundSeparador">
                 <h5 className="mb-7 py-3">Faça login com sua conta</h5>
-                <form>
+                <form onSubmit={this.handleLogin}>
                   <div className="form-group">
                     <input type="text" className="form-control" name="Usuario" placeholder="Usuario" />
                   </div>
