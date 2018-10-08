@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/NavBarAdm';
+import Navbar from '../components/Navbar';
 
-export default class Cadastro extends Component {
+export default class AlterandousuarioDados extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ export default class Cadastro extends Component {
       numero: null,
       bairro: null,
       cep: null,
-      cadastrou: null
+      cadastradorSucesso: null
     }
 
     this.handleChangeCpf = this.handleChangeCpf.bind(this);
@@ -24,8 +24,6 @@ export default class Cadastro extends Component {
     this.handleChangeCep = this.handleChangeCep.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  //TODO: cadatrar tbm o tipo de usuario que ele vai ser
 
   handleChangeCpf(event) {
     this.setState({ cpf_usr: event.target.value });
@@ -54,37 +52,24 @@ export default class Cadastro extends Component {
     let dataCadastro = new Date();
     fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&senha=${this.state.senha}&logradouro=${this.state.logradouro}&numero=${this.state.numero}&bairro=${this.state.bairro}&cep=${this.state.cep}&datacad=${dataCadastro}`)
       .then(response => response.json())
-      .then(() => {
-        this.setState({ cadastrou: true })
-        console.log(this.state.cadastrou);
-      })
       .catch(error => console.error(error));
   }
 
   render() {
-    let mensagem;
-    if (this.state.cadastrou === true) {
-      mensagem = (
-        <div class="alert alert-success" role="alert">
-          Usuario {this.state.nome} cadastrado com sucesso!
-        </div>
-      )
-    }
-
     return (
       <section>
         <Navbar />
         <div className='container'>
           <div className='row'>
-            <div className='col-12'>
-              <div className="w-400 mw-100 p-6">
-                <h5 className="mb-7 py-3">Cadastre um Usuario</h5>
-                {mensagem}
+            <div className='col-4'>
+              <div className="w-400 mw-100 p-6 telaCentralizada backgroundSeparador">
+                <h5 className="mb-7 py-3">Faça login com sua conta</h5>
+
                 <form onSubmit={this.handleSubmit}>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputCpf">CPF</label>
-                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
+                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.props.props.cpf_usr} onChange={this.handleChangeCpf} required />
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputNome">Nome Completo</label>
@@ -115,20 +100,7 @@ export default class Cadastro extends Component {
                       <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
                     </div>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" />
-                    <label class="form-check-label" for="inlineRadio1">Administrador</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" />
-                    <label class="form-check-label" for="inlineRadio2">Pro-Reitor</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" />
-                    <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
-                  </div>
-                  <br />
-                  <button type="submit" class="btn btn-success my-2">Cadastrar</button>
+                  <button type="submit" class="btn btn-success">Cadastrar</button>
                 </form>
 
               </div>

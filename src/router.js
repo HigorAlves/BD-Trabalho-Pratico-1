@@ -7,6 +7,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
+import AlterandousuarioDados from './screens/AlterandoUsuarioDados';
 
 //Telas Administrador
 import AdmScreen from './screens/Administrador/MainScreen';
@@ -47,7 +48,7 @@ export default class Route extends Component {
 
           {/* //Telas somente do Administrador */}
           <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={AdmScreen} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarUsuarios' component={CadastrarUsuario} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarusuarios' component={CadastrarUsuario} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/alterarusuario' component={AlterarTipoUsuario} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraragenciafomento' component={CadastroAgenciaFomento} />
@@ -56,6 +57,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarpublicacao' component={CadastroPublicacoes} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
         </div>
       </Router>
     )

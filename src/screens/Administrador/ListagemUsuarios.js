@@ -11,9 +11,9 @@ export default class ListagemUsuarios extends Component {
     this.getUsers = this.getUsers.bind(this);
   }
 
-  renderizaUsuarios = props => {
+  renderizaUsuarios = (props, index) => {
     return (
-      <tbody>
+      <tbody key={props.cpf_usr}>
         <tr>
           <td>{props.cpf_usr}</td>
           <td>{props.nome}</td>
@@ -24,8 +24,8 @@ export default class ListagemUsuarios extends Component {
           <td>{props.Cep}</td>
           <td>{props.Datacad}</td>
           <td>{props.DataSaida}</td>
-          <td><button className='btn btn-warning' type='button' onClick={this.removeUsuario}>Alterar</button></td>
-          <td><button className='btn btn-danger' type='button' onClick={this.removeUsuario}>Deletar</button></td>
+          <td><button className='btn btn-warning' type='button'>Alterar</button></td>
+          <td><button className='btn btn-danger' type='button' onClick={() => this.removeUsuario(index)}>Deletar</button></td>
         </tr>
       </tbody>
     )
@@ -42,11 +42,17 @@ export default class ListagemUsuarios extends Component {
       .catch(error => console.error(error))
   }
 
-  removeUsuario = (rowid) => {
+  alterarusuario = (index, usuario) => {
+    let deletado = usuario.splice(index, 1);
+    deletado.map((dados) => console.log(dados.cpf_usr))
+  }
+
+  removeUsuario = (key) => {
     const copiaUsuarios = [...this.state.usuarios_cadastrados];
-    copiaUsuarios.splice(rowid, 1);
+    let deletado = copiaUsuarios.splice(key, 1);
     this.setState({ usuarios_cadastrados: copiaUsuarios });
-    console.log(rowid);
+
+    deletado.map((dados) => console.log(dados.cpf_usr))
   }
 
   render() {
@@ -74,7 +80,7 @@ export default class ListagemUsuarios extends Component {
                     <th>Deletar</th>
                   </tr>
                 </thead>
-                {this.state.usuarios_cadastrados.map(this.renderizaUsuarios)}
+                {this.state.usuarios_cadastrados.map((usuario, index) => this.renderizaUsuarios(usuario, index))}
               </table>
             </div>
           </div>

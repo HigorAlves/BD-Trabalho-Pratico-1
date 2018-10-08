@@ -13,7 +13,7 @@ export default class CadastroDepartamento extends Component {
               <hr />
               <form>
                 <div class="form-group">
-                  <label for="inputIdentificadorEsp">Identificador do Documento</label>
+                  <label for="inputIdentificadorEsp">Identificador do Departamento</label>
                   <select id="inputIdentificadorEsp" class="form-control">
                     <option selected>Choose...</option>
                     <option>...</option>
