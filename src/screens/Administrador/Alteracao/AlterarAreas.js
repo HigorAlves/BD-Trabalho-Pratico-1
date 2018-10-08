@@ -9,7 +9,7 @@ export default class GrandesAreas extends Component {
 
         <div className='container'>
           <div className='row'>
-            <div className='col-6'>
+            <div className='col-md-6 col-sm-12'>
               <h4>Grande Area</h4>
               <hr />
               <form>
@@ -26,7 +26,7 @@ export default class GrandesAreas extends Component {
               </form>
             </div>
 
-            <div className='col-6'>
+            <div className='col-md-6 col-sm-12'>
               <h4>Area</h4>
               <hr />
               <form>
@@ -43,7 +43,7 @@ export default class GrandesAreas extends Component {
               </form>
             </div>
 
-            <div className='col-6 py-4'>
+            <div className='col-md-6 col-sm-12'>
               <h4>SubArea</h4>
               <hr />
               <form>
@@ -60,7 +60,7 @@ export default class GrandesAreas extends Component {
               </form>
             </div>
 
-            <div className='col-6 py-4'>
+            <div className='col-md-6 col-sm-12'>
               <h4>Especialidade</h4>
               <hr />
               <form>
