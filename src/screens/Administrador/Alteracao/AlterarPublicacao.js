@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../../../components/NavBarAdm';
 
-export default class CadastroPublicacoes extends Component {
+export default class AlterarPublicacao extends Component {
   render() {
     return (
       <div>
