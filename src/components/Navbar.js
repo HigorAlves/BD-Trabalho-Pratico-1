@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import '../assets/css/navbar.css';
 import { SEARCH } from '../lib/fontAwesome';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
 	render() {
 		return (
 			<div>
 				<nav className="navbar navbar-expand-lg navbar-dark navbar-primary">
-					<a className="navbar-brand" href="">
+					<Link className="navbar-brand" to="/">
 						Acervo de Recursos Educacionais
-					</a>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"

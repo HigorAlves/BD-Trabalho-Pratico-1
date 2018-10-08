@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/css/loginPage.css';
-
+import Navbar from '../components/Navbar';
 
 export default class Login extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ export default class Login extends Component {
   render() {
     return (
       <section>
+        <Navbar />
         <div className='container'>
           <div className='row'>
             <div className='col-4'>
