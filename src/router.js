@@ -14,6 +14,8 @@ import CadastrarUsuario from './screens/Administrador/CadastroUsuarios';
 import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
 import AlterarTipoUsuario from './screens/Administrador/AlterarTipoUsuario';
 import CadastrarGrandesAreas from './screens/Administrador/GrandesAreas';
+import CadastroAgenciaFomento from './screens/Administrador/AgenciaFomento';
+import CadastroDepartamento from './screens/Administrador/CadastroDepartamento';
 
 export default class Route extends Component {
   constructor(props) {
@@ -45,6 +47,8 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarUsuarios' component={CadastrarUsuario} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/alterarusuario' component={AlterarTipoUsuario} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraragenciafomento' component={CadastroAgenciaFomento} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrardepartamento' component={CadastroDepartamento} />
         </div>
       </Router>
     )
