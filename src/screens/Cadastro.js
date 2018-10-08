@@ -61,8 +61,8 @@ export default class Cadastro extends Component {
         <Navbar />
         <div className='container'>
           <div className='row'>
-            <div className='col-4'>
-              <div className="w-400 mw-100 p-6 telaCentralizada backgroundSeparador">
+            <div className='col-12'>
+              <div className="w-400 mw-100 p-6">
                 <h5 className="mb-7 py-3">Faça login com sua conta</h5>
 
                 <form onSubmit={this.handleSubmit}>

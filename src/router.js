@@ -25,15 +25,15 @@ export default class Route extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: null
+      loggedInAdministrador: null
     }
   }
 
   componentWillMount() {
-    if (localStorage.getItem('auth-token') != null) {
-      this.setState({ loggedIn: true });
+    if (localStorage.getItem('auth-token') === 'estalogado') {
+      this.setState({ loggedInAdministrador: true });
     } else {
-      this.setState({ loggedIn: false });
+      this.setState({ loggedInAdministrador: false });
     }
   }
 
@@ -47,17 +47,17 @@ export default class Route extends Component {
           <PrivateRoute authorized={true} exact path='/cadastrar' component={Cadastro} />
 
           {/* //Telas somente do Administrador */}
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={AdmScreen} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarusuarios' component={CadastrarUsuario} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/alterarusuario' component={AlterarTipoUsuario} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraragenciafomento' component={CadastroAgenciaFomento} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrardepartamento' component={CadastroDepartamento} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarDocumento' component={CadastrarDocumento} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarpublicacao' component={CadastroPublicacoes} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/administrador' component={AdmScreen} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarusuarios' component={CadastrarUsuario} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarusuario' component={AlterarTipoUsuario} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastraragenciafomento' component={CadastroAgenciaFomento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrardepartamento' component={CadastroDepartamento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarDocumento' component={CadastrarDocumento} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarpublicacao' component={CadastroPublicacoes} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/listarusuarios' component={ListaUsuarios} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
         </div>
       </Router>
     )
