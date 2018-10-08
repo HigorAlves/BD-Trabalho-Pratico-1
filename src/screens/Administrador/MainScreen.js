@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/NavBarAdm';
-import { USERS } from '../../lib/fontAwesome';
+import { USERS, DEPARTAMENTO, DOCUMENTO, AREA, AGENCIA, RECURSOS, PUBLICACAO } from '../../lib/fontAwesome';
 import { Link } from 'react-router-dom';
 
 
@@ -39,37 +39,37 @@ export default class MainScreen extends Component {
                       <Link to={'/cadastrarusuarios'}>Cadastrar Usuario</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <AREA />
                       <br />
                       <Link to={'/cadastrarGrandesAreas'}>Cadastrar Areas</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <AGENCIA />
                       <br />
                       <Link to={'/cadastraragenciafomento'}>Cadastrar Agencia Fomento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <DEPARTAMENTO />
                       <br />
                       <Link to={'/cadastrardepartamento'}>Cadastrar Departamento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <RECURSOS />
                       <br />
                       <Link to={'/cadastrarrecursosfinanceiros'}>Cadastrar Recursos Financeiros</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <DOCUMENTO />
                       <br />
                       <Link to={'/cadastrardocumento'}>Cadastrar Documento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <PUBLICACAO />
                       <br />
                       <Link to={'/cadastrarpublicacao'}>Cadastrar Publicação</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <PUBLICACAO />
                       <br />
                       <Link to={'/cadastratipopublicacao'}>Cadastrar Tipo Publicação</Link>
                     </div>
@@ -88,37 +88,37 @@ export default class MainScreen extends Component {
                       <Link to={'/alterarusuario'}>Alterar Usuario</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <AREA />
                       <br />
                       <Link to={'/alterarareas'}>Alterar Areas</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <AGENCIA />
                       <br />
                       <Link to={'/alteraragenciafomento'}>Alterar Agencia Fomento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <DEPARTAMENTO />
                       <br />
                       <Link to={'/alterardepartamento'}>Alterar Departamento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <RECURSOS />
                       <br />
                       <Link to={'/alterarrecursofinanceiro'}>Alterar Recurso Financeiro</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <DOCUMENTO />
                       <br />
                       <Link to={'/alterardocumento'}>Alterar Documento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <PUBLICACAO />
                       <br />
                       <Link to={'/alterarpublicacao'}>Alterar Alterar Publicação</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
+                      <PUBLICACAO />
                       <br />
                       <Link to={'/alterartipopublicacao'}>Alterar Tipo de Publicação</Link>
                     </div>
