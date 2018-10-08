@@ -3,6 +3,7 @@ import Navbar from '../components/NavBarAdm';
 import { USERS } from '../lib/fontAwesome';
 import { Link } from 'react-router-dom';
 
+
 export default class TelaADM extends Component {
   render() {
     return (
@@ -20,13 +21,15 @@ export default class TelaADM extends Component {
                 <hr />
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-md-4'>
+                    <div className='col-4'>
                       <USERS />
-                      <p>Cadastrar Usuario</p>
+                      <br />
+                      <Link to={'/cadastrar'}>Cadastrar Usuario</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
-                      <p>Cadastrar Administrador</p>
+                      <br />
+                      <Link to={'/cadastraradministrador'}>Cadastrar Administrador</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
@@ -59,7 +62,7 @@ export default class TelaADM extends Component {
                   <div className='row'>
                     <div className='col-md-4'>
                       <USERS />
-                      <Link to={'todosusuarios'}>Listar Usuarios</Link>
+                      <Link to={'/allusers'}>Listar Usuarios</Link>
                     </div>
                   </div>
                 </div>

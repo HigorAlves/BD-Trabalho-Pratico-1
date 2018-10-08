@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+.centralizarHorizontal{
+  align-content: center;
+}
+
 .telaCentralizada{
   position: fixed;
   top: 50%;

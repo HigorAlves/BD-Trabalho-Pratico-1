@@ -9,7 +9,7 @@ import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
 import TelaADM from './screens/TelaADM';
 import ListagemUsuarios from './screens/ListagemUsuarios';
-
+import CadastrarAdministrador from './screens/CadastrarAdministrador';
 export default class Route extends Component {
   constructor(props) {
     super(props);
@@ -36,6 +36,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={true} exact path='/cadastrar' component={Cadastro} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={TelaADM} />
           <PrivateRoute authorized={this.state.loggedIn} exact path='/allusers' component={ListagemUsuarios} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraradministrador' component={CadastrarAdministrador} />
         </div>
       </Router>
     )
