@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from '../components/NavBarAdm';
-import { USERS } from '../lib/fontAwesome';
+import Navbar from '../../components/NavBarAdm';
+import { USERS } from '../../lib/fontAwesome';
 import { Link } from 'react-router-dom';
 
 
-export default class TelaADM extends Component {
+export default class MainScreen extends Component {
   render() {
     return (
       <section>
@@ -24,16 +24,16 @@ export default class TelaADM extends Component {
                     <div className='col-4'>
                       <USERS />
                       <br />
-                      <Link to={'/cadastrar'}>Cadastrar Usuario</Link>
+                      <Link to={'/cadastrarusuarios'}>Cadastrar Usuario</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
                       <br />
-                      <Link to={'/cadastraradministrador'}>Cadastrar Administrador</Link>
+                      <Link to={'/alterarusuario'}>Alterar Tipo Usuario</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
-                      <p>Cadastrar Grandes Areas</p>
+                      <Link to={'/cadastrarGrandesAreas'}>Cadastrar Grandes Areas</Link>
                     </div>
                     <div className='col-md-4'>
                       <USERS />
@@ -62,7 +62,7 @@ export default class TelaADM extends Component {
                   <div className='row'>
                     <div className='col-md-4'>
                       <USERS />
-                      <Link to={'/allusers'}>Listar Usuarios</Link>
+                      <Link to={'/listarusuarios'}>Listar Usuarios</Link>
                     </div>
                   </div>
                 </div>

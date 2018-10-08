@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../components/NavBarAdm';
+import Navbar from '../../components/NavBarAdm';
 
 export default class Cadastro extends Component {
   constructor(props) {
@@ -62,23 +62,53 @@ export default class Cadastro extends Component {
           <div className='row'>
             <div className='col-4'>
               <div className="w-400 mw-100 p-6 telaCentralizada backgroundSeparador">
-                <h5 className="mb-7 py-3">Cadastre um Administrador</h5>
+                <h5 className="mb-7 py-3">Faça login com sua conta</h5>
 
                 <form onSubmit={this.handleSubmit}>
-                  <div class="form-group">
-                    <label for="inputCpf">Insira o CPF do usuario</label>
-                    <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCpf">CPF</label>
+                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputNome">Nome Completo</label>
+                      <input type="text" class="form-control" id="inputNome" placeholder="Nome Completo" value={this.state.nome} onChange={this.handleChangeNome} required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputSenha">Senha</label>
+                      <input type="password" class="form-control" id="inputSenha" placeholder="Senha" value={this.state.senha} onChange={this.handleChangeSenha} required />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputLogradouro">Logradouro</label>
+                      <input type="text" class="form-control" id="inputLogradouro" placeholder="Logradouro" value={this.state.logradouro} onChange={this.handleChangeLogradouro} required />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputNumero">Numero</label>
+                      <input type="text" class="form-control" id="inputNumero" value={this.state.numero} onChange={this.handleChangeNumero} required />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputBairro">Bairro</label>
+                      <input type="text" class="form-control" id="inputBairro" value={this.state.bairro} onChange={this.handleChangeBairro} />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputCep">CEP</label>
+                      <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
+                    </div>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" />
                     <label class="form-check-label" for="inlineRadio1">Administrador</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" />
                     <label class="form-check-label" for="inlineRadio2">Pro-Reitor</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" />
                     <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
                   </div>
                   <br />

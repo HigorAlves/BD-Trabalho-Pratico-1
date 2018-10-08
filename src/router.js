@@ -7,9 +7,14 @@ import PrivateRoute from './components/PrivateRoute';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
-import TelaADM from './screens/TelaADM';
-import ListagemUsuarios from './screens/ListagemUsuarios';
-import CadastrarAdministrador from './screens/CadastrarAdministrador';
+
+//Telas Administrador
+import AdmScreen from './screens/Administrador/MainScreen';
+import CadastrarUsuario from './screens/Administrador/CadastroUsuarios';
+import ListaUsuarios from './screens/Administrador/ListagemUsuarios';
+import AlterarTipoUsuario from './screens/Administrador/AlterarTipoUsuario';
+import CadastrarGrandesAreas from './screens/Administrador/GrandesAreas';
+
 export default class Route extends Component {
   constructor(props) {
     super(props);
@@ -34,9 +39,12 @@ export default class Route extends Component {
           <PrivateRoute authorized={true} exact path='/' component={Home} />
           <PrivateRoute authorized={true} exact path='/login' component={Login} />
           <PrivateRoute authorized={true} exact path='/cadastrar' component={Cadastro} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={TelaADM} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/allusers' component={ListagemUsuarios} />
-          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastraradministrador' component={CadastrarAdministrador} />
+
+          {/* //Telas somente do Administrador */}
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/administrador' component={AdmScreen} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrarUsuarios' component={CadastrarUsuario} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/listarusuarios' component={ListaUsuarios} />
+          <PrivateRoute authorized={this.state.loggedIn} exact path='/cadastrargrandesareas' component={CadastrarGrandesAreas} />
         </div>
       </Router>
     )
