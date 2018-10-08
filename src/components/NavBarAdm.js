@@ -10,6 +10,7 @@ class Navbar extends Component {
     localStorage.removeItem('auth-token');
     localStorage.removeItem('nome');
     this.props.history.push('/');
+    window.location.reload();
   }
 
   render() {

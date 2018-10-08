@@ -100,7 +100,14 @@ export default class Cadastro extends Component {
                       <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-success">Cadastrar</button>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputDataNascimento">Data Nascimento</label>
+                      <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-success p-2">Cadastrar</button>
                 </form>
 
               </div>

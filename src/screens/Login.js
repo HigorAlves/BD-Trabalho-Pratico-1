@@ -18,7 +18,8 @@ class Login extends Component {
     let token = 'estalogado';
     localStorage.setItem('auth-token', token);
     localStorage.setItem('nome', this.state.usuario);
-    this.props.history.push("/administrador");
+    window.location.reload();
+    this.props.history.push('/administrador');
   }
 
   render() {

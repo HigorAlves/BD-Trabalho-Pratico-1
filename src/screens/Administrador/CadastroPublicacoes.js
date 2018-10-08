@@ -13,15 +13,11 @@ export default class CadastroPublicacoes extends Component {
               <hr />
               <form>
                 <div className='form-row'>
-                  <div class="form-group col-md-4">
-                    <label for="inputIdentificador">Identificador</label>
-                    <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Identificador" required />
-                  </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="inputNome">Título</label>
                     <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Titulo" required />
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="inputNome">Titulo Alternativo</label>
                     <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="titulo alternativo" />
                   </div>
@@ -29,8 +25,11 @@ export default class CadastroPublicacoes extends Component {
 
                 <div className='form-row'>
                   <div class="form-group col-md-4">
-                    <label for="inputNome">Nome do Autor</label>
-                    <input type="text" class="form-control" id="inputNome" aria-describedby="name" placeholder="Nome completo" required />
+                    <label for="inputIdentificadorEsp">Selecione Pesquisador</label>
+                    <select id="inputIdentificadorEsp" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputIdioma">Idioma</label>
@@ -83,23 +82,6 @@ export default class CadastroPublicacoes extends Component {
                 <div class="form-group">
                   <label for="inputData">Palavras-chave</label>
                   <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="saude, instituciona,ufsj..." required />
-                </div>
-
-                <div className='form-row'>
-                  <div class="form-group col-md-6">
-                    <label for="inputIdentificadorEsp">CPF Administrador</label>
-                    <select id="inputIdentificadorEsp" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputIdentificadorEsp">CPF Pesquisador</label>
-                    <select id="inputIdentificadorEsp" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                  </div>
                 </div>
                 <div className='d-flex flex-row-reverse'>
                   <button type="submit" class="btn btn-warning m-2">Cancelar</button>

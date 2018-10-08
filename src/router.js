@@ -20,6 +20,7 @@ import CadastroDepartamento from './screens/Administrador/CadastroDepartamento';
 import CadastrarDocumento from './screens/Administrador/CadastrarDocumento';
 import CadastroPublicacoes from './screens/Administrador/CadastroPublicacoes';
 import CadastrarRecursosFinanceiros from './screens/Administrador/CadastrarRecursosFinanceiros';
+import CadastroTIpoPublicacao from './screens/Administrador/TipoPublicacao';
 
 export default class Route extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ export default class Route extends Component {
     return (
       <Router>
         <div>
-          <PrivateRoute exact path='/' render={() => { if (!this.state.loggedIn) return <Home />; return <Redirect to={{ pathname: '/' }} />; }} />
+          <PrivateRoute exact path='/' render={() => { if (!this.state.loggedInAdministrador) return <Home />; return <Redirect to={{ pathname: '/' }} />; }} />
           <PrivateRoute authorized={true} exact path='/' component={Home} />
           <PrivateRoute authorized={true} exact path='/login' component={Login} />
           <PrivateRoute authorized={true} exact path='/cadastrar' component={Cadastro} />
@@ -58,6 +59,7 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastrarrecursosfinanceiros' component={CadastrarRecursosFinanceiros} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/listarusuarios' component={ListaUsuarios} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardadosusuario' component={AlterandousuarioDados} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/cadastratipopublicacao' component={CadastroTIpoPublicacao} />
         </div>
       </Router>
     )

@@ -49,7 +49,7 @@ export default class CadastrarRecursosFinanceiros extends Component {
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="inputData">CPD do Pro-reitor</label>
+                  <label for="inputData">CPF do Pro-reitor</label>
                   <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="valor em reais" />
                 </div>
                 <button type="submit" class="btn btn-primary my-2">Salvar</button>

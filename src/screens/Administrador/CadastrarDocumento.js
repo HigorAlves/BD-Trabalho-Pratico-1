@@ -9,16 +9,9 @@ export default class CadastrarDocumento extends Component {
         <div className='container'>
           <div className='row'>
             <div className='col-12'>
-              <h4>Cadastar Agencia de Fomento</h4>
+              <h4>Cadastrar Documento</h4>
               <hr />
               <form>
-                <div class="form-group">
-                  <label for="inputIdentificadorEsp">Identificador do Documento</label>
-                  <select id="inputIdentificadorEsp" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
                 <div class="form-group">
                   <label for="inputNome">Descrição</label>
                   <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Insira o nome" />

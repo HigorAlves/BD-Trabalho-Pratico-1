@@ -13,19 +13,12 @@ export default class CadastroDepartamento extends Component {
               <hr />
               <form>
                 <div class="form-group">
-                  <label for="inputIdentificadorEsp">Identificador do Departamento</label>
-                  <select id="inputIdentificadorEsp" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="form-group">
                   <label for="inputNome">Nome do Departamento</label>
                   <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Insira o nome" />
                 </div>
                 <div class="form-group">
                   <label for="inputData">Data de cadastro</label>
-                  <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="DD/MM/YYYY" />
+                  <input type="text" class="form-control" id="inputData" aria-describedby="data" placeholder="YYYY/MM/DD" />
                 </div>
                 <button type="submit" class="btn btn-primary my-2">Salvar</button>
               </form>

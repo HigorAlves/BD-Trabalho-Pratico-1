@@ -31,7 +31,12 @@ export default class Navbar extends Component {
 							<li class="nav-item">
 								<Link class="nav-link" to={'/'}>Artigos</Link>
 							</li>
+							<li class="nav-item">
+								<Link class="nav-link" to={'/administrador'}>Administração</Link>
+							</li>
 						</ul>
+						<button className='btn btn-light mx-2' >Login</button>
+						<button className='btn btn-secondary' >Cadastrar</button>
 					</div>
 				</nav>
 

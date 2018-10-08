@@ -115,6 +115,14 @@ export default class Cadastro extends Component {
                       <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
                     </div>
                   </div>
+
+                  <div>
+                    <div class="form-group">
+                      <label for="inputDataNascimento">Data Nascimento</label>
+                      <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
+                    </div>
+                  </div>
+
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" />
                     <label class="form-check-label" for="inlineRadio1">Administrador</label>

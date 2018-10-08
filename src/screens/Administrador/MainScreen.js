@@ -41,11 +41,6 @@ export default class MainScreen extends Component {
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <USERS />
                       <br />
-                      <Link to={'/alterarusuario'}>Alterar Tipo Usuario</Link>
-                    </div>
-                    <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <USERS />
-                      <br />
                       <Link to={'/cadastrarGrandesAreas'}>Cadastrar Areas</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
@@ -73,6 +68,23 @@ export default class MainScreen extends Component {
                       <br />
                       <Link to={'/cadastrarpublicacao'}>Cadastrar Publicação</Link>
                     </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/cadastratipopublicacao'}>Cadastrar Tipo Publicação</Link>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section className='my-4'>
+                <h4>Area Alteração</h4>
+                <hr />
+                <div className='container'>
+                  <div className='col-md-2 col-sm-12 text-center m-2'>
+                    <USERS />
+                    <br />
+                    <Link to={'/alterarusuario'}>Alterar Usuario</Link>
                   </div>
                 </div>
               </section>

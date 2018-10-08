@@ -14,13 +14,6 @@ export default class GrandesAreas extends Component {
 							<hr />
 							<form>
 								<div class="form-group">
-									<label for="inputIdentificador">Identificador</label>
-									<select id="inputIdentificador" class="form-control">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
-								<div class="form-group">
 									<label for="inputNome">Nome</label>
 									<input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Insira o nome" />
 								</div>
@@ -32,13 +25,6 @@ export default class GrandesAreas extends Component {
 							<h4>Area</h4>
 							<hr />
 							<form>
-								<div class="form-group">
-									<label for="inputIdentificadorArea">Identificador</label>
-									<select id="inputIdentificadorArea" class="form-control">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
 								<div class="form-group">
 									<label for="inputNomeArea">Nome</label>
 									<input type="text" class="form-control" id="inputNomeArea" aria-describedby="nome" placeholder="Insira o nome" />
@@ -52,13 +38,6 @@ export default class GrandesAreas extends Component {
 							<hr />
 							<form>
 								<div class="form-group">
-									<label for="inputIdentificadorSub">Identificador</label>
-									<select id="inputIdentificadorSub" class="form-control">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
-								<div class="form-group">
 									<label for="inputNomeSub">Nome</label>
 									<input type="text" class="form-control" id="inputNomeSub" aria-describedby="nome" placeholder="Insira o nome" />
 								</div>
@@ -70,13 +49,6 @@ export default class GrandesAreas extends Component {
 							<h4>Especialidade</h4>
 							<hr />
 							<form>
-								<div class="form-group">
-									<label for="inputIdentificadorEsp">Identificador</label>
-									<select id="inputIdentificadorEsp" class="form-control">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
 								<div class="form-group">
 									<label for="inputNomeEsp">Nome</label>
 									<input type="text" class="form-control" id="inputNomeEsp" aria-describedby="nome" placeholder="Insira o nome" />
