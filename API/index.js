@@ -59,8 +59,19 @@ app.get('/usuarios/cadastrar', (req, res) => {
 //Cadastrar Publicacao
 app.get('/tipopublicacao/cadastrar', (req, res) => {
   let aux = { tipo } = req.query;
-  console.log(aux.tipo);
   connection.query(query.INSERT_TIPO_PUBLICACAO, aux.tipo, (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result);
+    }
+  })
+});
+
+//CADASTRAR DOCUMENTO
+app.get('/documento/cadastrar', (req, res) => {
+  let aux = { descricao, caminho } = req.query;
+  connection.query(query.INSERT_DOCUMENTO, [aux.descricao, aux.caminho], (error, result) => {
     if (error) {
       return res.send(error);
     } else {
