@@ -137,6 +137,17 @@ app.get('/especialidade/cadastrar', (req, res) => {
   })
 });
 
+app.get('/publicacao/cadastrar', (req, res) => {
+  let aux = { Titulo, Titulo_alternativo, DataCad, Idioma, Pais, Resumo, Palavra_chave, IdGA, IdTipoPub, IdAgenciaFomento, IdDoc, cpf_pesquisador, cpf_administrador } = req.query;
+  connection.query(query.INSERT_PUBLICACAO, [aux.Titulo, aux.Titulo_alternativo, aux.DataCad, aux.Idioma, aux.Pais, aux.Resumo, aux.Palavra_chave, IdGA, aux.IdTipoPub, aux.IdAgenciaFomento, aux.IdDoc, aux.cpf_pesquisador, aux.cpf_administrador], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
 
 app.listen(4000, () => {
   console.log('Executando na porta 4000 e Conectado ao banco De dados');
