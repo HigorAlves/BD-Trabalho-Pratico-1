@@ -19,10 +19,12 @@ class Login extends Component {
 
 	handleLogin = e => {
 		e.preventDefault();
-		localStorage.setItem('auth-token', this.state.senha);
-		localStorage.setItem('nome', this.state.usuario);
-		window.location.reload();
-		this.props.history.push('/administrador');
+		if (this.state.usuario) {
+			localStorage.setItem('auth-token', this.state.senha);
+			localStorage.setItem('nome', this.state.usuario);
+			window.location.reload();
+			this.props.history.push('/');
+		}
 	};
 
 	render() {

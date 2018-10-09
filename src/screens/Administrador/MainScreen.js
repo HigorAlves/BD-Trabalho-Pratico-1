@@ -92,11 +92,7 @@ export default class MainScreen extends Component {
                       <br />
                       <Link to={'/alteraragenciafomento'} className='text-dark'>Alterar Agencia Fomento</Link>
                     </div>
-                    <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <DEPARTAMENTO />
-                      <br />
-                      <Link to={'/alterardepartamento'} className='text-dark'>Alterar Departamento</Link>
-                    </div>
+                    
                     <div className='col-md-2 col-sm-12 text-center m-2'>
                       <RECURSOS />
                       <br />
