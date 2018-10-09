@@ -13,13 +13,6 @@ export default class CadastrarRecursosFinanceiros extends Component {
               <hr />
               <form>
                 <div class="form-group">
-                  <label for="inputIdentificadorEsp">Identificador</label>
-                  <select id="inputIdentificadorEsp" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="form-group">
                   <label for="inputNome">Data de Cadastro</label>
                   <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Data Cadastro" />
                 </div>

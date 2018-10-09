@@ -49,11 +49,6 @@ export default class MainScreen extends Component {
                       <Link to={'/cadastraragenciafomento'} className='text-dark'>Cadastrar Agencia Fomento</Link>
                     </div>
                     <div className='col-md-2 col-sm-12 text-center m-2'>
-                      <DEPARTAMENTO />
-                      <br />
-                      <Link to={'/cadastrardepartamento'} className='text-dark'>Cadastrar Departamento</Link>
-                    </div>
-                    <div className='col-md-2 col-sm-12 text-center m-2'>
                       <RECURSOS />
                       <br />
                       <Link to={'/cadastrarrecursosfinanceiros'} className='text-dark'>Cadastrar Recursos Financeiros</Link>
