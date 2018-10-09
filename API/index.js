@@ -78,6 +78,18 @@ app.get('/documento/cadastrar', (req, res) => {
       return res.send(result);
     }
   })
+});
+
+// CADASTRAR AGENCIA FOMENTO
+app.get('/agencia/cadastrar', (req, res) => {
+  let aux = { nome, data } = req.query;
+  connection.query(query.INSERT_AGENCIA_FOMENTO, [aux.nome, aux.data], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
 })
 
 
