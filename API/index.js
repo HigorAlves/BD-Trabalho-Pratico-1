@@ -148,6 +148,17 @@ app.get('/publicacao/cadastrar', (req, res) => {
   })
 });
 
+app.get('/recursofinanceiro/cadastrar', (req, res) => {
+  let aux = { IdArea,IdSub,IdGA,valor,DataCad,cpf_ProReitor } = req.query;
+  connection.query(query.INSERT_PUBLICACAO, [IdArea,IdSub,IdGA,valor,DataCad,cpf_ProReitor], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
 
 app.listen(4000, () => {
   console.log('Executando na porta 4000 e Conectado ao banco De dados');
