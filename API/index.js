@@ -90,7 +90,52 @@ app.get('/agencia/cadastrar', (req, res) => {
       return res.send(result)
     }
   })
-})
+});
+
+// CADASTRAR GRANDE AREA
+app.get('/ga/cadastrar', (req, res) => {
+  let aux = { nome } = req.query;
+  connection.query(query.INSERT_GRANDE_AREA, aux.nome, (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
+app.get('/area/cadastrar', (req, res) => {
+  let aux = { nome, id } = req.query;
+  connection.query(query.INSERT_AREA, [aux.nome, aux.id], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
+app.get('/subarea/cadastrar', (req, res) => {
+  let aux = { nome, id } = req.query;
+  connection.query(query.INSERT_SUBAREA, [aux.nome, aux.id], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
+app.get('/especialidade/cadastrar', (req, res) => {
+  let aux = { nome, id } = req.query;
+  connection.query(query.INSERT_ESPECIALIDADE, [aux.nome, aux.id], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
 
 
 app.listen(4000, () => {
