@@ -5,7 +5,7 @@ export default class AlterarTipousuario extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      usuarios: [],
+      usuarios: [{cpf_usr: 0, nome: 0}],
       selecionado: null,
       cpf_usr: null,
       nome: null,
@@ -61,10 +61,12 @@ export default class AlterarTipousuario extends Component {
     fetch('http://localhost:4000/usuarios')
       .then(response => response.json())
       .then(response => this.setState({ usuarios: response.data }))
-      .catch(error => console.error(error))
+      .catch(error => {
+        console.error(error);
+      })
   }
 
-  setDropdown = (usuario, index) => {
+  setDropdown = (usuario) => {
     return (
       <option value={usuario.cpf_usr}>{usuario.nome}</option>
     )
@@ -72,7 +74,6 @@ export default class AlterarTipousuario extends Component {
 
   componentWillMount() {
     this.getUsers();
-
   }
 
   preencherDados = (event) => {
@@ -106,7 +107,7 @@ export default class AlterarTipousuario extends Component {
                 <form onSubmit={this.handleSubmit}>
                   <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Escolha o usuario</label>
                   <select class="custom-select my-1 mr-sm-2" id="dropdownUsuario" onChange={this.preencherDados} value={this.state.selecionado}>
-                    {this.state.usuarios.map((usuario, index) => this.setDropdown(usuario, index))}
+                    {this.state.usuarios.map((usuario, index) => this.setDropdown(usuario))}
                   </select>
 
                   <div class="form-row">

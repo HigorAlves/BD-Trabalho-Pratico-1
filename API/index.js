@@ -1,16 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-const querys = require('./querys');
+const query = require('./querys');
 
 const app = express();
 app.use(cors());
 
 var db_config = {
   host: 'us-cdbr-iron-east-01.cleardb.net',
-  user: 'bbaa4f909970b7',
-  password: 'cd18d30f',
-  database: 'heroku_7c4a5149dcb9e6c'
+  user: 'bc1c4323d0aba4',
+  password: '24364cf9',
+  database: 'heroku_83faec3f836c990'
 };
 
 var connection = mysql.createConnection(db_config);
@@ -21,81 +21,36 @@ connection.connect(error => {
   }
 });
 
-
-function handleDisconnect() {
-  connection = mysql.createConnection(db_config);
-
-  connection.connect(function (err) {
-    if (err) {
-      console.log('error when connecting to db:', err);
-      setTimeout(handleDisconnect, 2000);
-    }
-  });
-
-  connection.on('error', function (err) {
-    console.log('db error', err);
-    if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-      handleDisconnect();
-    } else {
-      throw err;
-    }
-  });
-}
-
-handleDisconnect()
-//Getters and Setrs
-
 app.get('/', (req, res) => {
-  res.send('Ola mundo');
+  res.send('Esta é uma API de consumação, parece que você não pode acessar ela.');
 });
 
-//Lista todos os Usuarios
-app.get('/usuarios', (req, res) => {
-  connection.query(querys.SELECT_ALL_USUARIOS, (error, results) => {
-    if (error) {
-      return res.send(error);
+//Pegar todos os usuarios
+app.get('/usuarios',(req,res) => {
+  connection.query(query.SELECT_ALL_USUARIOS, (error, results) => {
+    if(error){
+      return res.send('Deu error: ' + error);
     } else {
       return res.json({
         data: results
       })
     }
   })
-});
-//Cadastra um novo Usuario
-app.get('/usuarios/cadastrar', (req, res) => {
-  const usuario = { cpf_usr, nome, senha, logradouro, numero, bairro, cep, datacad } = req.query;
-
-  connection.query(querys.INSERT_USUARIO, [usuario.cpf_usr, usuario.nome, usuario.senha, usuario.logradouro, usuario.numero, usuario.bairro, usuario.cep, usuario.datacad], (error, results) => {
-    if (error) {
-      return res.send(error);
-    } else {
-      return res.send('OK');
-    }
-  })
-});
-
-//Lista todos os Administradores
-app.get('/administrador', (req, res) => {
-  connection.query(querys.SELECT_ALL_ADMINISTRADORES, (error, results) => {
-    if (error) {
-      return res.send(error);
-    } else {
-      return res.send(results);
-    }
-  })
 })
-//Cadastra novo Administrador
-app.get('/administrador/cadastrar', (req, res) => {
-  const administrador = { cpf_adm, tipo_adm } = req.query;
-  connection.query(querys.INSERT_ADMINISTRADOR, [administrador.cpf_adm, administrador.tipo_adm], (error, results) => {
-    if (error) {
+//Cadastrar um novo Usuario
+app.get('/usuarios/cadastrar',(req,res) => {
+  let usuario = {cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad,DataNasc,Cod_cidade,idTipoUsuario} = req.query;
+  connection.query(query.INSERT_USUARIO, [cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad,DataNasc,Cod_cidade,idTipoUsuario], (error, result) => {
+    if(error){
       return res.send(error);
-    } else {
-      return res.send('Administrador cadastrado com sucesso');
+    }else{
+      return res.send(result);
     }
   })
+
 })
+
 
 app.listen(4000, () => {
-  console.log('Executando na porta 4000');
+  console.log('Executando na porta 4000 e Conectado ao banco De dados');
 })

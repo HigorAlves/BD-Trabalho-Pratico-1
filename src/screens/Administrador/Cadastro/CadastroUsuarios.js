@@ -12,7 +12,10 @@ export default class Cadastro extends Component {
       numero: null,
       bairro: null,
       cep: null,
-      tipo: null,
+      dataNascimento: null,
+      datacad: null,
+      cod_cidade: null,
+      tipoUsuario: null,
       cadastrou: null
     }
 
@@ -23,6 +26,10 @@ export default class Cadastro extends Component {
     this.handleChangeNumero = this.handleChangeNumero.bind(this);
     this.handleChangeBairro = this.handleChangeBairro.bind(this);
     this.handleChangeCep = this.handleChangeCep.bind(this);
+    this.handleChangeDataNascimento = this.handleChangeDataNascimento.bind(this);
+    this.handleChangeDataCad = this.handleChangeDataCad.bind(this);
+    this.handleChangeDataCodCidade = this.handleChangeDataCodCidade.bind(this);
+    this.handleChangeDataTipoUsuario = this.handleChangeDataTipoUsuario.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -49,11 +56,25 @@ export default class Cadastro extends Component {
   handleChangeCep(event) {
     this.setState({ cep: event.target.value });
   }
+  handleChangeDataNascimento(event) {
+    this.setState({ dataNascimento: event.target.value });
+  }
+  
+  handleChangeDataCad(event){
+    this.setState({datacad: event.target.value})
+  }
+  handleChangeDataCodCidade(event){
+    this.setState({cod_cidade: event.target.value})
+  }
+  handleChangeDataTipoUsuario = (event) => {
+    console.log(event)
+    this.setState({tipoUsuario: event})
+  }
 
   handleSubmit(event) {
     event.preventDefault();
     let dataCadastro = new Date();
-    fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&senha=${this.state.senha}&logradouro=${this.state.logradouro}&numero=${this.state.numero}&bairro=${this.state.bairro}&cep=${this.state.cep}&datacad=${dataCadastro}`)
+    fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&Senha=${this.state.senha}&Logradouro=${this.state.logradouro}&Numero=${this.state.numero}&Bairro=${this.state.bairro}&Cep=${this.state.cep}&Datacad=${this.state.dataCadastro}&DataNasc=${this.state.dataNascimento}&Cod_cidade=${this.state.cod_cidade}&idTipoUsuario=${this.state.tipoUsuario}`)
       .then(response => response.json())
       .then(() => {
         this.setState({ cadastrou: true })
@@ -127,23 +148,27 @@ export default class Cadastro extends Component {
                     </div>
                   </div>
 
-                  <div>
-                    <div class="form-group">
+                  <div className='form-row'>
+                    <div class="form-group col-md-6">
                       <label for="inputDataNascimento">Data Nascimento</label>
-                      <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
+                      <input type="text" class="form-control" id="inputData" value={this.state.dataNascimento} onChange={this.handleChangeDataNascimento} />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputDataNascimento">Codigo Cidade</label>
+                      <input type="text" class="form-control" id="inputData" value={this.state.cod_cidade} onChange={this.handleChangeDataCodCidade} />
                     </div>
                   </div>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onClick={()=>{this.setState({tipoUsuario: 1})}} value='1' />
                     <label class="form-check-label" for="inlineRadio1">Administrador</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" onClick={()=>this.setState({tipoUsuario: 2})} />
                     <label class="form-check-label" for="inlineRadio2">Pro-Reitor</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" onClick={()=>{this.setState({tipoUsuario: 3})}} />
                     <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
                   </div>
                   <br />
