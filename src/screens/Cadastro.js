@@ -12,6 +12,9 @@ export default class Cadastro extends Component {
       numero: null,
       bairro: null,
       cep: null,
+      dataNascimento: null,
+      datacad: null,
+      cod_cidade: null,
       cadastradorSucesso: null
     }
 
@@ -22,6 +25,9 @@ export default class Cadastro extends Component {
     this.handleChangeNumero = this.handleChangeNumero.bind(this);
     this.handleChangeBairro = this.handleChangeBairro.bind(this);
     this.handleChangeCep = this.handleChangeCep.bind(this);
+    this.handleChangeDataNascimento = this.handleChangeDataNascimento.bind(this);
+    this.handleChangeDataCad = this.handleChangeDataCad.bind(this);
+    this.handleChangeDataCodCidade = this.handleChangeDataCodCidade.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -46,13 +52,30 @@ export default class Cadastro extends Component {
   handleChangeCep(event) {
     this.setState({ cep: event.target.value });
   }
+  handleChangeDataNascimento(event) {
+    this.setState({ dataNascimento: event.target.value });
+  }
+
+  handleChangeDataCad(event) {
+    this.setState({ datacad: event.target.value })
+  }
+  handleChangeDataCodCidade(event) {
+    this.setState({ cod_cidade: event.target.value })
+  }
 
   handleSubmit(event) {
     event.preventDefault();
     let dataCadastro = new Date();
-    fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&senha=${this.state.senha}&logradouro=${this.state.logradouro}&numero=${this.state.numero}&bairro=${this.state.bairro}&cep=${this.state.cep}&datacad=${dataCadastro}`)
+    fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&Senha=${this.state.senha}&Logradouro=${this.state.logradouro}&Numero=${this.state.numero}&Bairro=${this.state.bairro}&Cep=${this.state.cep}&Datacad=${this.state.dataCadastro}&DataNasc=${this.state.dataNascimento}&Cod_cidade=${this.state.cod_cidade}&idTipoUsuario=${this.state.tipoUsuario}`)
       .then(response => response.json())
-      .catch(error => console.error(error));
+      .then(() => {
+        this.setState({ cadastrou: true })
+        console.log(this.state.cadastrou);
+      })
+      .catch(error => {
+        console.log(error, ' Não foi possivel cadastrar');
+        this.setState({ cadastrou: false });
+      });
   }
 
   render() {
