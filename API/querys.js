@@ -111,6 +111,16 @@ inner join areas a on a.IdGA = g.IdGA
 inner join subareas s on s.IdArea = a.IdArea
 inner join especialidades e on e.IdSub = s.IdSub'
 
+const DELETE_PUBLICACAO = 'delete from publicacao where id_publicacao = 2'
+const DELETE_USUARIO = 'delete from usuario where cpf_usr = 1234567897'
+const DELETE_RECURSO_FINANCEIRO = 'delete from Recursos_Financeiros where idrec = 1'
+const DELETE_TIPO_USUARIO = 'delete from usuarioTP where IdTipoUsuario = 1'
+const DELETE_TIPO_PUBLICACAO = 'delete from Tipo_Publicacao where idtipoPub = 1'
+const DELETE_DOCUMENTO = 'delete from documento where iddoc = 1'
+const DELETE_AGENCIA_FOMENTO = 'delete from AgenciaFomento where idAgenciaFomento = 1'
+const DELETE_GRANDE_AREA = 'delete from Grandes_Areas  where idga = 1';
+
+
 module.exports = {
 	INSERT_USUARIO,
 	SELECT_ALL_USUARIOS,
