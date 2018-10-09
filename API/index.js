@@ -149,8 +149,30 @@ app.get('/publicacao/cadastrar', (req, res) => {
 });
 
 app.get('/recursofinanceiro/cadastrar', (req, res) => {
-  let aux = { IdArea,IdSub,IdGA,valor,DataCad,cpf_ProReitor } = req.query;
-  connection.query(query.INSERT_PUBLICACAO, [IdArea,IdSub,IdGA,valor,DataCad,cpf_ProReitor], (error, result) => {
+  let aux = { IdArea, IdSub, IdGA, valor, DataCad, cpf_ProReitor } = req.query;
+  connection.query(query.INSERT_PUBLICACAO, [IdArea, IdSub, IdGA, valor, DataCad, cpf_ProReitor], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
+app.get('/tipousuario/update', (req, res) => {
+  let aux = { descricao, nivel, id } = req.query;
+  connection.query(query.UPDATE_TIPO_USUARIO, [descricao, nivel, id], (error, result) => {
+    if (error) {
+      return res.send(error);
+    } else {
+      return res.send(result)
+    }
+  })
+});
+
+app.get('/usuario/update', (req, res) => {
+  let aux = { nome, senha, logradouro, numero, bairro, cep, datacad, dataNasc, cod_cidade, IdTipoUsuario, cpf_usr } = req.query;
+  connection.query(query.UPDATE_TIPO_USUARIO, [nome, senha, logradouro, numero, bairro, cep, datacad, dataNasc, cod_cidade, IdTipoUsuario, cpf_usr], (error, result) => {
     if (error) {
       return res.send(error);
     } else {

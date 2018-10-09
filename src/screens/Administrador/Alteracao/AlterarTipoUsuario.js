@@ -5,7 +5,7 @@ export default class AlterarTipousuario extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      usuarios: [{cpf_usr: 0, nome: 0}],
+      usuarios: [{ cpf_usr: 0, nome: 0 }],
       selecionado: null,
       cpf_usr: null,
       nome: null,
@@ -14,6 +14,10 @@ export default class AlterarTipousuario extends Component {
       numero: null,
       bairro: null,
       cep: null,
+      dataCad: null,
+      dataNascimento: null,
+      cod_cidade: null,
+      tipoUsuario: null,
       cadastrou: null
     }
 
@@ -25,8 +29,24 @@ export default class AlterarTipousuario extends Component {
     this.handleChangeBairro = this.handleChangeBairro.bind(this);
     this.handleChangeCep = this.handleChangeCep.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChangeTipoUsuario = this.handleChangeTipoUsuario.bind(this);
+    this.handleChangeDataCad = this.handleChangeDataCad.bind(this);
+    this.handleChangeDataNascimento = this.handleChangeDataNascimento.bind(this);
+    this.handleChangeCodCidade = this.handleChangeCodCidade.bind(this);
   }
-
+  handleChangeDataCad(e) {
+    this.setState({ dataCad: e.target.value })
+  }
+  handleChangeDataNascimento(e) {
+    this.setState({ dataNascimento: e.target.value })
+  }
+  handleChangeCodCidade(e) {
+    this.setState({ cod_cidade: e.target.value })
+  }
+  handleChangeTipoUsuario = (e) => {
+    console.log(e);
+    this.setState({ tipoUsuario: e });
+  }
   handleChangeCpf(event) {
     this.setState({ cpf_usr: event.target.value });
   }
@@ -51,8 +71,7 @@ export default class AlterarTipousuario extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    let dataCadastro = new Date();
-    fetch(`http://localhost:4000/usuarios/cadastrar?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&senha=${this.state.senha}&logradouro=${this.state.logradouro}&numero=${this.state.numero}&bairro=${this.state.bairro}&cep=${this.state.cep}&datacad=${dataCadastro}`)
+    fetch(`http://localhost:4000/usuario/update?cpf_usr=${this.state.cpf_usr}&nome=${this.state.nome}&senha=${this.state.senha}&logradouro=${this.state.logradouro}&numero=${this.state.numero}&bairro=${this.state.bairro}&cep=${this.state.cep}&datacad=${this.state.dataCad}&dataNasc=${this.state.dataNascimento}&cod_cidade=${this.state.cod_cidade}&IdTipoUsuario=${this.state.tipoUsuario}`)
       .then(response => response.json())
       .catch(error => console.error(error));
   }
@@ -89,6 +108,10 @@ export default class AlterarTipousuario extends Component {
         this.setState({ numero: usuario.Numero })
         this.setState({ bairro: usuario.Bairro })
         this.setState({ cep: usuario.Cep })
+        this.setState({ dataCadastro: usuario.DataCad })
+        this.setState({ cod_cidade: usuario.DataNasc })
+        this.setState({ cod_cidade: usuario.Cod_Cidade })
+        this.setState({ tipoUsuario: usuario.IdTipoUsuario })
       }
     })
   }
@@ -113,7 +136,7 @@ export default class AlterarTipousuario extends Component {
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputCpf">CPF</label>
-                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} required />
+                      <input type="text" class="form-control" id="inputCpfg" placeholder="CPF" value={this.state.cpf_usr} onChange={this.handleChangeCpf} disabled />
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputNome">Nome Completo</label>
@@ -145,20 +168,29 @@ export default class AlterarTipousuario extends Component {
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputDataNascimento">Data Cadastro</label>
+                    <input type="text" class="form-control" id="inputCep" value={this.state.dataCad} onChange={this.handleChangeDataCad} />
+                  </div>
+                  <div class="form-group">
                     <label for="inputDataNascimento">Data Nascimento</label>
-                    <input type="text" class="form-control" id="inputCep" value={this.state.cep} onChange={this.handleChangeCep} />
+                    <input type="text" class="form-control" id="inputCep" value={this.state.dataNascimento} onChange={this.handleChangeDataNascimento} />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputDataNascimento">Codigo Cidade</label>
+                    <input type="text" class="form-control" id="inputCep" value={this.state.cod_cidade} onChange={this.handleChangeCodCidade} />
                   </div>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onClick={() => this.handleChangeTipoUsuario(1)} value="1" />
                     <label class="form-check-label" for="inlineRadio1">Administrador</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" onClick={() => this.handleChangeTipoUsuario(2)} value="2" />
                     <label class="form-check-label" for="inlineRadio2">Pro-Reitor</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" onClick={() => this.handleChangeTipoUsuario(3)} value="3" />
                     <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
                   </div>
 

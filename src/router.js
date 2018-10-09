@@ -28,6 +28,14 @@ import AlterarRecursoFinanceiro from './screens/Administrador/Alteracao/AlterarR
 import AlterarDocumento from './screens/Administrador/Alteracao/AlterarDocumento';
 import AlterarPublicacao from './screens/Administrador/Alteracao/AlterarPublicacao';
 import AlterarTipoPublicacao from './screens/Administrador/Alteracao/AlterarTipoPublicacao';
+import RecursosLiberados from './screens/Administrador/Consultas/RecursosLiberados';
+import Consulta2 from './screens/Administrador/Consultas/Consulta2';
+import Consulta3 from './screens/Administrador/Consultas/Consulta3';
+import Consulta4 from './screens/Administrador/Consultas/Consulta4';
+import Consulta5 from './screens/Administrador/Consultas/Consulta5';
+import Consulta6 from './screens/Administrador/Consultas/Consulta6';
+import Consulta7 from './screens/Administrador/Consultas/Consulta7';
+import Consulta8 from './screens/Administrador/Consultas/Consulta8';
 
 export default class Route extends Component {
   constructor(props) {
@@ -74,6 +82,14 @@ export default class Route extends Component {
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterardocumento' component={AlterarDocumento} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterarpublicacao' component={AlterarPublicacao} />
           <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/alterartipopublicacao' component={AlterarTipoPublicacao} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/recursosliberados' component={RecursosLiberados} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta2' component={Consulta2} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta3' component={Consulta3} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta4' component={Consulta4} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta5' component={Consulta5} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta6' component={Consulta6} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta7' component={Consulta7} />
+          <PrivateRoute authorized={this.state.loggedInAdministrador} exact path='/consulta8' component={Consulta8} />
         </div>
       </Router>
     )

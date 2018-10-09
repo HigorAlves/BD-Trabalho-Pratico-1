@@ -131,6 +131,52 @@ export default class MainScreen extends Component {
                       <br />
                       <Link to={'/listarusuarios'} className='text-dark'>Listar Usuarios</Link>
                     </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/recursosliberados'} className='text-dark'>Recursos Liberados</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta2'} className='text-dark'>Valor total disponibilizado por Grande área</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta3'} className='text-dark'>Valor total disponibilizado para Área</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta4'} className='text-dark'>Valor total disponibilizado para Subárea</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta5'} className='text-dark'>Quantidade de Publicações cadastradas por período</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta6'} className='text-dark'>Quantidade de Publicações por Agência de Fomento e por período</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta7'} className='text-dark'>Quantidade de publicações por Grande Área e por período</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta8'} className='text-dark'>Publicações por autor</Link>
+                    </div>
+                    <div className='col-md-2 col-sm-12 text-center m-2'>
+                      <USERS />
+                      <br />
+                      <Link to={'/consulta9'} className='text-dark'>Exibir todos os as grandes áreas de conhecimento, suas respectivas áreas e subáreas e especialidades
+</Link>
+                    </div>
                   </div>
                 </div>
               </section>
