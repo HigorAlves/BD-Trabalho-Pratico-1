@@ -41,7 +41,22 @@ export default class Sidebar extends Component {
 								<tbody>
 									<tr>
 										<td>
-											<span>Exemplo</span>
+											<span>Autor</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>Titulo</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>Palavras Chaves</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>Area</span>
 										</td>
 									</tr>
 								</tbody>
@@ -51,25 +66,23 @@ export default class Sidebar extends Component {
 				</section>
 
 				<section>
-
 					<div className="container">
 						<div className="row">
-							<div className='col-sm-2 my-2'>
+							<div className="col-sm-2 my-2">
 								<Link to={'/login'}>
-									<button className='btn btn-light'>Login</button>
+									<button className="btn btn-light">Login</button>
 								</Link>
 							</div>
-							<div className='col-sm-4'></div>
-							<div className='col-sm-2 my-2'>
+							<div className="col-sm-4" />
+							<div className="col-sm-2 my-2">
 								<Link to={'/cadastrar'}>
-									<button className='btn btn-secondary'>Cadastrar</button>
+									<button className="btn btn-secondary">Cadastrar</button>
 								</Link>
 							</div>
 						</div>
 					</div>
 				</section>
-
-			</div >
+			</div>
 		);
 	}
 }

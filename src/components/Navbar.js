@@ -26,13 +26,29 @@ export default class Navbar extends Component {
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
-								<Link class="nav-link" to={'/'}>Inicio</Link>
+								<Link class="nav-link" to={'/'}>
+									Inicio
+								</Link>
 							</li>
 							<li class="nav-item">
-								<Link class="nav-link" to={'/'}>Artigos</Link>
+								<Link class="nav-link" to={'/'}>
+									Artigos
+								</Link>
 							</li>
 							<li class="nav-item">
-								<Link class="nav-link" to={'/administrador'}>Administração</Link>
+								<Link class="nav-link" to={'/administrador'}>
+									Administrador
+								</Link>
+							</li>
+							<li class="nav-item">
+								<Link class="nav-link" to={'/proreitor'}>
+									Pro Reitor
+								</Link>
+							</li>
+							<li class="nav-item">
+								<Link class="nav-link" to={'/pesquisador'}>
+									Pesquisador
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -43,6 +59,33 @@ export default class Navbar extends Component {
 					id="navbarToggler"
 				>
 					<Sidebar />
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<Link class="nav-link" to={'/'}>
+								Inicio
+							</Link>
+						</li>
+						<li class="nav-item">
+							<Link class="nav-link" to={'/'}>
+								Artigos
+							</Link>
+						</li>
+						<li class="nav-item">
+							<Link class="nav-link" to={'/administrador'}>
+								Administrador
+							</Link>
+						</li>
+						<li class="nav-item">
+							<Link class="nav-link" to={'/proreitor'}>
+								Pro Reitor
+							</Link>
+						</li>
+						<li class="nav-item">
+							<Link class="nav-link" to={'/pesquisador'}>
+								Pesquisador
+							</Link>
+						</li>
+					</ul>
 				</section>
 			</div>
 		);
