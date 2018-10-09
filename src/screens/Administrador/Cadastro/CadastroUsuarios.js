@@ -33,8 +33,6 @@ export default class Cadastro extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //TODO: cadatrar tbm o tipo de usuario que ele vai ser
-
   handleChangeCpf(event) {
     this.setState({ cpf_usr: event.target.value });
   }
@@ -59,16 +57,16 @@ export default class Cadastro extends Component {
   handleChangeDataNascimento(event) {
     this.setState({ dataNascimento: event.target.value });
   }
-  
-  handleChangeDataCad(event){
-    this.setState({datacad: event.target.value})
+
+  handleChangeDataCad(event) {
+    this.setState({ datacad: event.target.value })
   }
-  handleChangeDataCodCidade(event){
-    this.setState({cod_cidade: event.target.value})
+  handleChangeDataCodCidade(event) {
+    this.setState({ cod_cidade: event.target.value })
   }
   handleChangeDataTipoUsuario = (event) => {
     console.log(event)
-    this.setState({tipoUsuario: event})
+    this.setState({ tipoUsuario: event })
   }
 
   handleSubmit(event) {
@@ -160,15 +158,15 @@ export default class Cadastro extends Component {
                   </div>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onClick={()=>{this.setState({tipoUsuario: 1})}} value='1' />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" onClick={() => { this.setState({ tipoUsuario: 1 }) }} value='1' />
                     <label class="form-check-label" for="inlineRadio1">Administrador</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" onClick={()=>this.setState({tipoUsuario: 2})} />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" onClick={() => this.setState({ tipoUsuario: 2 })} />
                     <label class="form-check-label" for="inlineRadio2">Pro-Reitor</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" onClick={()=>{this.setState({tipoUsuario: 3})}} />
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" onClick={() => { this.setState({ tipoUsuario: 3 }) }} />
                     <label class="form-check-label" for="inlineRadio3">Pesquisador</label>
                   </div>
                   <br />

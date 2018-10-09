@@ -13,6 +13,13 @@ var db_config = {
   database: 'heroku_83faec3f836c990'
 };
 
+// var db_config = {
+//   host: '127.0.0.1:3306',
+//   user: 'root',
+//   password: 'P@rt1uRU',
+//   database: 'bancodados'
+// }
+
 var connection = mysql.createConnection(db_config);
 
 connection.connect(error => {
@@ -26,9 +33,9 @@ app.get('/', (req, res) => {
 });
 
 //Pegar todos os usuarios
-app.get('/usuarios',(req,res) => {
+app.get('/usuarios', (req, res) => {
   connection.query(query.SELECT_ALL_USUARIOS, (error, results) => {
-    if(error){
+    if (error) {
       return res.send('Deu error: ' + error);
     } else {
       return res.json({
@@ -38,12 +45,12 @@ app.get('/usuarios',(req,res) => {
   })
 })
 //Cadastrar um novo Usuario
-app.get('/usuarios/cadastrar',(req,res) => {
-  let usuario = {cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad,DataNasc,Cod_cidade,idTipoUsuario} = req.query;
-  connection.query(query.INSERT_USUARIO, [cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad,DataNasc,Cod_cidade,idTipoUsuario], (error, result) => {
-    if(error){
+app.get('/usuarios/cadastrar', (req, res) => {
+  let usuario = { cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad, DataNasc, Cod_cidade, idTipoUsuario } = req.query;
+  connection.query(query.INSERT_USUARIO, [cpf_usr, nome, Senha, Logradouro, Numero, Bairro, Cep, Datacad, DataNasc, Cod_cidade, idTipoUsuario], (error, result) => {
+    if (error) {
       return res.send(error);
-    }else{
+    } else {
       return res.send(result);
     }
   })
