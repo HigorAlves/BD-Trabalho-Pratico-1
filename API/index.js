@@ -13,13 +13,6 @@ var db_config = {
 	database: 'heroku_83faec3f836c990'
 };
 
-// var db_config = {
-// 	host: 'http://localhost:3306',
-// 	user: 'root',
-// 	password: 'P@rt1uRU',
-// 	database: 'bancodados'
-// };
-
 var connection = mysql.createConnection(db_config);
 
 connection.connect(error => {
